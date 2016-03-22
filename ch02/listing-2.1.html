@@ -1,0 +1,41 @@
+<!doctype html>
+<head>
+  <style>
+  .padded {
+    font-size: 16px;
+    padding: 1em;
+  }
+
+  /* add "outline" class to artificially highlight margins */
+  .padded.outline {
+    position: relative;
+  }
+  .padded.outline::before,
+  .padded.outline::after {
+    content: '';
+    display: block;
+    position: absolute;
+    outline: 2px dashed #999;
+    outline-offset: -1px;
+  }
+  .padded.outline::before {
+    top: 1em;
+    right: 1em;
+    bottom: 1em;
+    left: 1em;
+  }
+  .padded.outline::after {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="padded">
+    We have built partnerships with small farms around the world to
+    hand-select beans at the peak of season.
+  </div>
+</body>

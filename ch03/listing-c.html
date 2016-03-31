@@ -1,32 +1,43 @@
 <!doctype html>
 <head>
+  <!-- two column with gutter  -->
   <style>
+    :root {
+      box-sizing: border-box;
+    }
+
+    *,
+    ::before,
+    ::after {
+      box-sizing: inherit;
+    }
 
     body {
       background-color: #eee;
       font-family: Helvetica, Arial, sans-serif;
     }
 
+    .main {
+      float: left;
+      width: 70%;
+    }
+
+    .sidebar {
+      float: left;
+      width: calc(30% - 1.5em);
+      margin-left: 1.5em;
+      padding: 1.5em;
+      background-color: #fff;
+      border-radius: .5em;
+    }
+
     header {
-      padding: 1em 1.5em;
       color: #fff;
       background-color: #0072b0;
       border-radius: .5em;
     }
 
     main {
-      float: left;
-      width: 70%;
-      background-color: #fff;
-      padding: 1em 1.5em;
-      border-radius: .5em;
-    }
-
-    aside {
-      float: left;
-      width: 30%;
-      margin-top: 0;
-      padding: 1.5em;
       background-color: #fff;
       border-radius: .5em;
     }
@@ -39,14 +50,15 @@
     <h1>Franklin Running Club</h1>
   </header>
   <div class="container">
-    <main>
+    <main class="main">
       <h2>Come join us!</h2>
       <p>
         The Franklin Running club meets at 6:00pm every Thursday
         at the town square. Runs are three to five miles, at your
         own pace.
+      </p>
     </main>
-    <aside>
+    <aside class="sidebar">
       <div class="widget"></div>
       <div class="widget"></div>
       <div class="gizmo"></div>

@@ -1,7 +1,16 @@
 <!doctype html>
 <head>
-  <!-- two-column broken -->
   <style>
+    :root {
+      box-sizing: border-box;
+    }
+
+    *,
+    ::before,
+    ::after {
+      box-sizing: inherit;
+    }
+
     body {
       background-color: #eee;
       font-family: Helvetica, Arial, sans-serif;
@@ -22,7 +31,8 @@
 
     .sidebar {
       float: left;
-      width: 30%;
+      width: 29%;
+      margin-left: 1%;
       padding: 1.5em;
       background-color: #fff;
       border-radius: .5em;

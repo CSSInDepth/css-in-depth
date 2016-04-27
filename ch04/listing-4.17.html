@@ -31,6 +31,9 @@
 
     [class*="column-"] {
       float: left;
+      margin-top: 0;
+      padding: 0 0.75em;
+      min-height: 1px;
     }
 
     .column-1 { width: 8.3333%; }
@@ -55,7 +58,7 @@
     }
 
     .main {
-      padding: 0 1.5em;
+      padding: 0 1.5em 1.5em;
       background-color: #fff;
       border-radius: .5em;
     }
@@ -66,16 +69,9 @@
     }
 
     .media {
-      float: left;
-      margin: 0 1.5em 1.5em 0;
-      width: calc(50% - 1.5em);
       padding: 1.5em;
       background-color: #eee;
       border-radius: 0.5em;
-    }
-
-    .media:nth-child(odd) {
-      clear: left;
     }
 
     .media-image {

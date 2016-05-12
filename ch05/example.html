@@ -54,20 +54,26 @@
       margin-left: 1.5em;
     }
 
-    .f-one {
+    .flex {
       display: flex;
     }
 
-    .f-one-main {
+    .column-main {
       flex-grow: 2;
       margin-top: 0;
     }
 
-    .f-one-sidebar {
+    .column-sidebar {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .column-sidebar > .tile {
       flex-grow: 1;
     }
 
-    .f-one > * + * {
+    .flex > * + * {
       margin-top: 0;
       margin-left: 1.5em;
     }
@@ -159,27 +165,31 @@
         <li><a href="/features">Features</a></li>
         <li><a href="/pricing">Pricing</a></li>
         <li><a href="/support">Support</a></li>
-        <li class="nav-right"><a href="/about">About</a></li>
+        <li class="nav-right">
+          <a href="/about">About</a>
+        </li>
       </ul>
     </nav>
-    <main class="f-one">
-      <div class="f-one-main tile">
+    <main class="flex">
+      <div class="column-main tile">
         <h1>Team collaboration done right</h1>
         <p>Thousands of teams from all over the
           world turn to <b>Ink</b> to communicate
           and get things done.</p>
       </div>
-      <div class="f-one-sidebar f-two">
+      <div class="column-sidebar">
         <div class="tile">
           <form class="login-form">
             <h3>Login</h3>
             <p>
               <label for="username">Username</label>
-              <input id="username" type="text" name="username"/>
+              <input id="username" type="text"
+                name="username"/>
             </p>
             <p>
               <label for="password">Password</label>
-              <input id="password" type="password" name="password"/>
+              <input id="password" type="password"
+                name="password"/>
             </p>
             <button type="submit">Login</button>
           </form>
@@ -191,7 +201,9 @@
             <span class="cost-dollars">20</span>
             <span class="cost-cents">.00</span>
           </div>
-          <a class="cta-button" href="/pricing">Sign up</a>
+          <a class="cta-button" href="/pricing">
+            Sign up
+          </a>
         </div>
       </div>
     </main>

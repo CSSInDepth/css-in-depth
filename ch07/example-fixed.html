@@ -1,0 +1,83 @@
+<!doctype html>
+<head>
+  <style>
+    :root {
+      box-sizing: border-box;
+    }
+
+    *,
+    ::before,
+    ::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      min-height: 200vh;
+    }
+
+    .modal {
+      display: none;
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-body {
+      position: fixed;
+      top: 3em;
+      bottom: 3em;
+      right: 20%;
+      left: 20%;
+      padding: 2em 3em;
+      background-color: white;
+      overflow: auto;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: .1em;
+      right: .3em;
+      display: block;
+      padding: .3em;
+      font-size: 2em;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+
+<body>
+  <button id="open">Open modal</button>
+  <div class="modal" id="modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-body">
+      <div class="modal-close" id="close">&times;</div>
+      <h2>Modal heading</h2>
+      <p>Modal content</p>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    let button = document.getElementById('open');
+    let close = document.getElementById('close');
+    let modal = document.getElementById('modal');
+
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      modal.style.display = 'block';
+    });
+
+    close.addEventListener('click', (event) => {
+      event.preventDefault();
+      modal.style.display = 'none';
+    });
+  </script>
+</body>

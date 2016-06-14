@@ -1,0 +1,112 @@
+<!doctype html>
+<head>
+  <style>
+    :root {
+      box-sizing: border-box;
+    }
+
+    *,
+    ::before,
+    ::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      min-height: 200vh;
+    }
+
+
+    .dropdown {
+      display: inline-block;
+      position: relative;
+      padding: .5em 2.5em .5em 1.5em;
+      border: 1px solid #ccc;
+      background-color: #eee;
+    }
+
+    .dropdown::after {
+      content: "";
+      position: absolute;
+      right: 1.3em;
+      top: .95em;
+      border-width: .3em;
+      border-style: solid;
+      border-color: black transparent transparent;
+    }
+    .dropdown:hover::after {
+      top: .65em;
+      border-color: transparent transparent black;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      left: 0;
+      min-width: 100%;
+      top: 2.1em;
+    }
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .submenu {
+      padding-left: 0;
+      margin-top: 0;
+      list-style-type: none;
+      border: 1px solid #999;
+    }
+
+    .submenu > li + li {
+      border-top: 1px solid #999;
+    }
+
+    .submenu > li > a {
+      display: block;
+      padding: .5em 1.5em;
+      background-color: #eee;
+      color: #369;
+      text-decoration: none;
+    }
+
+    .submenu > li > a:hover {
+      background-color: #fff;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="dropdown">
+      <div class="dropdown-label">Open menu</div>
+      <div class="dropdown-menu">
+        <ul class="submenu">
+          <li><a href="#">Item one</a></li>
+          <li><a href="#">Item two</a></li>
+          <li><a href="#">Item three</a></li>
+          <li><a href="#">Item four</a></li>
+          <li><a href="#">Item five</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <p>Content beneath dropdown</p>
+
+  <script type="text/javascript">
+    let button = document.getElementById('open');
+    let close = document.getElementById('close');
+    let modal = document.getElementById('modal');
+
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      modal.style.display = 'block';
+    });
+
+    close.addEventListener('click', (event) => {
+      event.preventDefault();
+      modal.style.display = 'none';
+    });
+  </script>
+</body>

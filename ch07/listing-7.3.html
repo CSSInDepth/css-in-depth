@@ -36,7 +36,6 @@
       bottom: 0;
       left: 0;
       background-color: rgba(0, 0, 0, 0.2);
-      z-index: 200;
     }
 
     .modal-body {
@@ -48,17 +47,13 @@
       padding: 2em 3em;
       background-color: white;
       overflow: auto;
-      z-index: 300;
     }
 
     .modal-close {
       position: absolute;
-      top: .1em;
-      right: .3em;
-      display: block;
-      padding: .3em;
-      font-size: 2em;
-      line-height: 1;
+      top: 0.3em;
+      right: 0.3em;
+      padding: 0.3em;
       cursor: pointer;
     }
   </style>
@@ -76,7 +71,7 @@
   <div class="modal" id="modal">
     <div class="modal-backdrop"></div>
     <div class="modal-body">
-      <div class="modal-close" id="close">&times;</div>
+      <button class="modal-close" id="close">close</button>
       <h2>Wombat Newsletter</h2>
       <p>Sign up for our monthly newsletter. No spam.
          We promise!</p>
@@ -91,16 +86,16 @@
   </div>
 
   <script type="text/javascript">
-    let button = document.getElementById('open');
-    let close = document.getElementById('close');
-    let modal = document.getElementById('modal');
+    var button = document.getElementById('open');
+    var close = document.getElementById('close');
+    var modal = document.getElementById('modal');
 
-    button.addEventListener('click', (event) => {
+    button.addEventListener('click', function (event) {
       event.preventDefault();
       modal.style.display = 'block';
     });
 
-    close.addEventListener('click', (event) => {
+    close.addEventListener('click', function (event) {
       event.preventDefault();
       modal.style.display = 'none';
     });

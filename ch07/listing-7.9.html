@@ -1,0 +1,70 @@
+<!doctype html>
+<head>
+  <style>
+    :root {
+      box-sizing: border-box;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin: 40px;
+    }
+
+    .box {
+      display: inline-block;
+      height: 200px;
+      width: 200px;
+      line-height: 200px;
+      text-align: center;
+      border: 2px solid black;
+      background-color: #ea5;
+      margin-left: -60px;
+      vertical-align: top;
+    }
+
+    .one {
+      margin-left: 0;
+    }
+
+    .two {
+      margin-top: 30px;
+    }
+
+    .three {
+      margin-top: 60px;
+    }
+
+    .positioned {
+      position: relative;
+      background-color: #5ae;
+      z-index: 1;
+    }
+
+    .absolute {
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      height: 2em;
+      background-color: #fff;
+      border: 2px dashed #888;
+      z-index: 100;
+      line-height: initial;
+      padding: 1em;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="box one positioned">
+    one
+    <div class="absolute">nested</div>
+  </div>
+  <div class="box two positioned">two</div>
+  <div class="box three">three</div>
+</body>

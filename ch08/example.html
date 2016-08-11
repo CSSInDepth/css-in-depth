@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Wombat Coffee Roasters</title>
+  <style>
+    html {
+      box-sizing: border-box;
+      font-size: calc(1vw + 0.6em);
+    }
+
+    @media (min-width: 50em) {
+      html {
+        font-size: 1.125em;
+      }
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      margin: 0;
+      background-color: #fff;
+    }
+
+    /*
+     * Links
+     */
+    a:link {
+      color: hsl(204, 80%, 40%);
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a:visited {
+      color: hsl(230, 80%, 40%);
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a:active {
+      color: hsl(0, 80%, 40%);
+    }
+
+    /*
+     * Header section
+     */
+    .page-header {
+      background-color: #fff;
+      padding: 1em;
+    }
+
+    .page-header h1 {
+      color: #333;
+      font-size: 2.25rem;
+      text-transform: uppercase;
+      margin: .2em 0;
+    }
+
+    @media (min-width: 50em) {
+      .page-header {
+        padding-left: 4em;
+        padding-right: 4em;
+      }
+    }
+
+    .slogan {
+      color: #888;
+      font-size: .875em;
+      margin-bottom: 1em;
+    }
+
+    /*
+     * Hero image
+     */
+    .hero {
+      padding: 2em 1em;
+      text-align: center;
+      background-image: url(coffee-beans.jpg);
+      background-size: 100%;
+      color: #fff;
+      text-shadow: 0.1em 0.1em 0.3em #000;
+    }
+
+    @media (min-width: 35em) {
+      .hero {
+        padding: 5em 3em;
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (min-width: 50em) {
+      .hero {
+        padding: 7em 6em;
+      }
+    }
+
+    /*
+     * Main section
+     */
+     main {
+       padding: 1em;
+     }
+
+     @media (min-width: 35em) {
+       main {
+         padding: 2em 1em;
+       }
+     }
+
+     @media (min-width: 50em) {
+       main {
+         padding-right: 4em;
+         padding-left: 4em;
+       }
+     }
+
+     @media (min-width: 35em) {
+      .row {
+        display: flex;
+        margin-left: -.75em;
+        margin-right: -.75em;
+       }
+
+       [class*="column-"] {
+         margin-left: 0.75em;
+         margin-right: 0.75em;
+       }
+
+       .column-1 { flex: 8.3333%; }
+       .column-2 { flex: 16.6667%; }
+       .column-3 { flex: 25%; }
+       .column-4 { flex: 33.3333%; }
+       .column-5 { flex: 41.6667%; }
+       .column-6 { flex: 50%; }
+       .column-7 { flex: 58.3333%; }
+       .column-8 { flex: 66.6667%; }
+       .column-9 { flex: 75%; }
+       .column-10 { flex: 83.3333%; }
+       .column-11 { flex: 91.6667% }
+       .column-12 { flex: 100%; }
+
+     }
+
+    .subtitle {
+      margin-top: 1.5em;
+      margin-bottom: 1.5em;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header id="header" class="page-header">
+    <h1>Wombat Coffee Roasters</h1>
+    <div class="slogan">We love coffee</div>
+  </header>
+
+  <div id="hero" class="hero">
+    Welcome to Wombat Coffee Roasters! We are passionate about our craft, striving to bring you the best hand-crafted coffee in the city.
+  </div>
+
+  <main id="main">
+    <div class="row">
+      <section class="column-4">
+        <h2 class="subtitle">Single-origin</h2>
+        <p>We have built partnerships with small farms around the world to hand-select beans at the peak of season. We then careful roast in <a href="/batch-size.html">small batches</a> to maximize their potential.</p>
+      </section>
+      <section class="column-4">
+        <h2 class="subtitle">Blends</h2>
+        <p>Our tasters have put together a selection of carefully balanced blends. Our famous <a href="/house-blend.html">house blend</a> is available year round.</p>
+      </section>
+      <section class="column-4">
+        <h2 class="subtitle">Brewing Equipment</h2>
+        <p>We offer our favorite kettles, French presses, and pour-over cones. Come to one of our <a href="/classes.html">brewing classes</a> to learn how to brew the perfect pour-over cup.</p>
+      </section>
+    </div>
+  </main>
+
+</body>
+</html>

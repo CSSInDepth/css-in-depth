@@ -123,6 +123,9 @@
 
     .nav-menu {
       display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
       margin: 0;
       padding-left: 0;
       border: 1px solid #ccc;
@@ -149,13 +152,16 @@
     @media (min-width: 35em) {
       .nav-menu {
         display: flex;
+        position: static;
         border: 0;
         padding: 0 1em;
       }
 
       .nav-menu > li {
         flex: 1;
-        border: none;
+      }
+      .nav-menu > li + li {
+        border: 0;
       }
 
       .nav-menu > li > a {
@@ -222,24 +228,11 @@
         margin-right: -.75em;
        }
 
-       [class*="column-"] {
-         margin-left: 0.75em;
+       .column {
+         flex: 1;
          margin-right: 0.75em;
+         margin-left: 0.75em;
        }
-
-       .column-1 { flex: 8.3333%; }
-       .column-2 { flex: 16.6667%; }
-       .column-3 { flex: 25%; }
-       .column-4 { flex: 33.3333%; }
-       .column-5 { flex: 41.6667%; }
-       .column-6 { flex: 50%; }
-       .column-7 { flex: 58.3333%; }
-       .column-8 { flex: 66.6667%; }
-       .column-9 { flex: 75%; }
-       .column-10 { flex: 83.3333%; }
-       .column-11 { flex: 91.6667% }
-       .column-12 { flex: 100%; }
-
      }
 
     .subtitle {
@@ -261,7 +254,9 @@
     </div>
 
     <div class="menu">
-      <button class="menu-toggle" id="toggle-menu">open menu</button>
+      <button class="menu-toggle" id="toggle-menu">
+        open menu
+      </button>
     </div>
   </header>
 
@@ -275,22 +270,35 @@
   </nav>
 
   <div id="hero" class="hero">
-    Welcome to Wombat Coffee Roasters! We are passionate about our craft, striving to bring you the best hand-crafted coffee in the city.
+    Welcome to Wombat Coffee Roasters! We are
+    passionate about our craft, striving to bring you
+    the best hand-crafted coffee in the city.
   </div>
 
   <main id="main">
     <div class="row">
-      <section class="column-4">
+      <section class="column">
         <h2 class="subtitle">Single-origin</h2>
-        <p>We have built partnerships with small farms around the world to hand-select beans at the peak of season. We then careful roast in <a href="/batch-size.html">small batches</a> to maximize their potential.</p>
+        <p>We have built partnerships with small farms
+          around the world to hand-select beans at the
+          peak of season. We then careful roast in
+          <a href="/batch-size.html">small batches</a>
+          to maximize their potential.</p>
       </section>
-      <section class="column-4">
+      <section class="column">
         <h2 class="subtitle">Blends</h2>
-        <p>Our tasters have put together a selection of carefully balanced blends. Our famous <a href="/house-blend.html">house blend</a> is available year round.</p>
+        <p>Our tasters have put together a selection of
+          carefully balanced blends. Our famous
+          <a href="/house-blend.html">house blend</a>
+          is available year round.</p>
       </section>
-      <section class="column-4">
+      <section class="column">
         <h2 class="subtitle">Brewing Equipment</h2>
-        <p>We offer our favorite kettles, French presses, and pour-over cones. Come to one of our <a href="/classes.html">brewing classes</a> to learn how to brew the perfect pour-over cup.</p>
+        <p>We offer our favorite kettles, French
+          presses, and pour-over cones. Come to one of
+          our <a href="/classes.html">brewing
+          classes</a> to learn how to brew the perfect
+          pour-over cup.</p>
       </section>
     </div>
   </main>

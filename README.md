@@ -1,5 +1,7 @@
-# css-in-depth
-Code examples from CSS In Depth by Keith J. Grant
+# CSS in Depth
+Code listings from [CSS In Depth](https://manning.com/books/css-in-depth) by Keith J. Grant
+
+![CSS in Depth book cover](cover.png)
 
 It is generally a best practice to link to stylesheets external to your HTML. I have not done this in these examples for ease of reading. Instead, I have included the CSS for each listing in the page's head using style tags.
 

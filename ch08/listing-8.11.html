@@ -5,15 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Wombat Coffee Roasters</title>
   <style>
-    html {
+    :root {
       box-sizing: border-box;
       font-size: calc(1vw + 0.6em);
-    }
-
-    @media (min-width: 50em) {
-      html {
-        font-size: 1.125em;
-      }
     }
 
     *,
@@ -23,27 +17,26 @@
     }
 
     body {
-      font-family: Helvetica, Arial, sans-serif;
       margin: 0;
-      background-color: #fff;
+      font-family: Helvetica, Arial, sans-serif;
     }
 
     /*
      * Links
      */
     a:link {
-      color: hsl(204, 80%, 40%);
+      color: #1476b8;
       font-weight: bold;
       text-decoration: none;
     }
     a:visited {
-      color: hsl(230, 80%, 40%);
+      color: #1430b8;
     }
     a:hover {
       text-decoration: underline;
     }
     a:active {
-      color: hsl(0, 80%, 40%);
+      color: #b81414;
     }
 
     /*
@@ -57,13 +50,6 @@
     @media (min-width: 35em) {
       .page-header {
         padding: 1em;
-      }
-    }
-
-    @media (min-width: 50em) {
-      .page-header {
-        padding-left: 4em;
-        padding-right: 4em;
       }
     }
 
@@ -82,16 +68,55 @@
 
     .slogan {
       color: #888;
-      font-size: .875em;
+      font-size: 0.875em;
       margin: 0;
+    }
+
+    /*
+     * Hero image
+     */
+    .hero {
+      padding: 2em 1em;
+      text-align: center;
+      background-image: url(coffee-beans.jpg);
+      background-size: 100%;
+      color: #fff;
+      text-shadow: 0.1em 0.1em 0.3em #000;
+    }
+
+    @media (min-width: 35em) {
+      .hero {
+        padding: 5em 3em;
+        font-size: 1.2rem;
+      }
+    }
+
+    /*
+     * Main section
+     */
+     main {
+       padding: 1em;
+     }
+
+    @media (min-width: 35em) {
+      main {
+        padding: 2em 1em;
+      }
+    }
+
+    .subtitle {
+      margin-top: 1.5em;
+      margin-bottom: 1.5em;
+      font-size: 0.875rem;
+      text-transform: uppercase;
     }
 
     /*
      * Menu
      */
-     .menu {
-       position: relative;
-     }
+    .menu {
+      position: relative;
+    }
 
     .menu-toggle {
       position: absolute;
@@ -122,6 +147,10 @@
       right: 0;
       left: 0;
       margin: 0;
+    }
+
+    .menu.is-open .menu-dropdown {
+      display: block;
     }
 
     @media (min-width: 35em) {
@@ -182,76 +211,21 @@
       }
     }
 
-    @media (min-width: 50em) {
-      .nav-menu {
-        padding: 0 4em;
-      }
-    }
-
-    /*
-     * Hero image
+    /**
+     * Main columns
      */
-    .hero {
-      padding: 2em 1em;
-      text-align: center;
-      background-image: url(coffee-beans.jpg);
-      background-size: 100%;
-      color: #fff;
-      text-shadow: 0.1em 0.1em 0.3em #000;
-    }
-
     @media (min-width: 35em) {
-      .hero {
-        padding: 5em 3em;
-        font-size: 1.2rem;
+     .row {
+       display: flex;
+       margin-left: -.75em;
+       margin-right: -.75em;
       }
-    }
 
-    @media (min-width: 50em) {
-      .hero {
-        padding: 7em 6em;
+      .column {
+        flex: 1;
+        margin-right: 0.75em;
+        margin-left: 0.75em;
       }
-    }
-
-    /*
-     * Main section
-     */
-     main {
-       padding: 1em;
-     }
-
-     @media (min-width: 35em) {
-       main {
-         padding: 2em 1em;
-       }
-     }
-
-     @media (min-width: 50em) {
-       main {
-         padding-right: 4em;
-         padding-left: 4em;
-       }
-     }
-
-     @media (min-width: 35em) {
-      .row {
-        display: flex;
-        margin-left: -.75em;
-        margin-right: -.75em;
-       }
-
-       .column {
-         flex: 1;
-         margin-right: 0.75em;
-         margin-left: 0.75em;
-       }
-     }
-
-    .subtitle {
-      margin-top: 1.5em;
-      margin-bottom: 1.5em;
-      font-size: 0.875rem;
-      text-transform: uppercase;
     }
 
   </style>
@@ -280,11 +254,11 @@
     </div>
   </nav>
 
-  <div id="hero" class="hero">
+  <aside id="hero" class="hero">
     Welcome to Wombat Coffee Roasters! We are
     passionate about our craft, striving to bring you
     the best hand-crafted coffee in the city.
-  </div>
+  </aside>
 
   <main id="main">
     <div class="row">
@@ -317,17 +291,11 @@
   <script type="text/javascript">
     (function () {
       var menuButton = document.getElementById('toggle-menu');
-      var menu = document.getElementById('main-menu');
       menuButton.addEventListener('click', function(event) {
         event.preventDefault();
+        var menu = document.getElementById('main-menu');
         menu.classList.toggle('is-open');
       });
-      var nav = document.querySelector('nav');
-      console.log(nav);
-      nav.addEventListener('blur', function(event) {
-        console.log('blur');
-        menu.classList.remove('is-open');
-      })
     })();
   </script>
 

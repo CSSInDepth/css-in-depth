@@ -1,244 +1,248 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wombat Coffee Roasters</title>
-  <style>
-    :root {
-      box-sizing: border-box;
-      font-size: calc(1vw + 0.6em);
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wombat Coffee Roasters</title>
+<style>
+  :root {
+    box-sizing: border-box;
+    font-size: calc(1vw + 0.6em);
+  }
 
-    *,
-    *::before,
-    *::after {
-      box-sizing: inherit;
-    }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
 
-    body {
-      margin: 0;
-      font-family: Helvetica, Arial, sans-serif;
-    }
+  body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+  }
 
-    /*
-     * Links
-     */
-    a:link {
-      color: #1476b8;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    a:visited {
-      color: #1430b8;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    a:active {
-      color: #b81414;
-    }
+  /*
+   * Links
+   */
+  a:link {
+    color: #1476b8;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  a:visited {
+    color: #1430b8;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  a:active {
+    color: #b81414;
+  }
 
-    /*
-     * Header section
-     */
+  /*
+   * Header section
+   */
+  .page-header {
+    padding: 0.4em 1em;
+    background-color: #fff;
+  }
+
+  @media (min-width: 35em) {
     .page-header {
-      padding: 0.4em 1em;
-      background-color: #fff;
+      padding: 1em;
     }
+  }
 
-    @media (min-width: 35em) {
-      .page-header {
-        padding: 1em;
-      }
-    }
+  .title > h1 {
+    color: #333;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin: .2em 0;
+  }
 
+  @media (min-width: 35em) {
     .title > h1 {
-      color: #333;
-      text-transform: uppercase;
-      font-size: 1.5rem;
-      margin: .2em 0;
+      font-size: 2.25rem;
     }
+  }
 
-    @media (min-width: 35em) {
-      .title > h1 {
-        font-size: 2.25rem;
-      }
-    }
+  .slogan {
+    color: #888;
+    font-size: 0.875em;
+    margin: 0;
+  }
 
-    .slogan {
-      color: #888;
-      font-size: 0.875em;
-      margin: 0;
-    }
+  /*
+   * Hero image
+   */
+  .hero {
+    padding: 2em 1em;
+    text-align: center;
+    background-image: url(coffee-beans.jpg);
+    background-size: 100%;
+    color: #fff;
+    text-shadow: 0.1em 0.1em 0.3em #000;
+  }
 
-    /*
-     * Hero image
-     */
+  @media (min-width: 35em) {
     .hero {
+      padding: 5em 3em;
+      font-size: 1.2rem;
+    }
+  }
+
+  /*
+   * Main section
+   */
+   main {
+     padding: 1em;
+   }
+
+  @media (min-width: 35em) {
+    main {
       padding: 2em 1em;
-      text-align: center;
-      background-image: url(coffee-beans.jpg);
-      background-size: 100%;
-      color: #fff;
-      text-shadow: 0.1em 0.1em 0.3em #000;
     }
+  }
 
-    @media (min-width: 35em) {
-      .hero {
-        padding: 5em 3em;
-        font-size: 1.2rem;
-      }
-    }
+  .subtitle {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+  }
 
-    /*
-     * Main section
-     */
-     main {
-       padding: 1em;
-     }
+  /*
+   * Menu
+   */
+  .menu {
+    position: relative;
+  }
 
-    @media (min-width: 35em) {
-      main {
-        padding: 2em 1em;
-      }
-    }
+  .menu-toggle {
+    position: absolute;
+    top: -1.2em;
+    right: 0.1em;
+    border: 0;
+    background-color: transparent;
+    font-size: 3em;
+    width: 1em;
+    height: 1em;
+    line-height: 0.4;
+    text-indent: 5em;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .menu-toggle::after {
+    position: absolute;
+    top: 0.2em;
+    left: 0.2em;
+    display: block;
+    content: "\2261";
+    text-indent: 0;
+  }
 
-    .subtitle {
-      margin-top: 1.5em;
-      margin-bottom: 1.5em;
-      font-size: 0.875rem;
-      text-transform: uppercase;
-    }
+  .menu-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0;
+  }
 
-    /*
-     * Menu
-     */
-    .menu {
-      position: relative;
-    }
+  .menu.is-open .menu-dropdown {
+    display: block;
+  }
 
-    .menu-toggle {
-      position: absolute;
-      top: -1.2em;
-      right: 0.1em;
-      border: 0;
-      background-color: transparent;
-      font-size: 3em;
-      width: 1em;
-      height: 1em;
-      line-height: 0.4;
-      text-indent: 5em;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-    .menu-toggle::after {
-      position: absolute;
-      top: 0.2em;
-      left: 0.2em;
-      display: block;
-      content: "\2261";
-      text-indent: 0;
-    }
+  .nav-menu {
+    margin: 0;
+    padding-left: 0;
+    border: 1px solid #ccc;
+    list-style: none;
+    background-color: #000;
+    color: #fff;
+  }
 
-    .menu-dropdown {
-      display: none;
-      position: absolute;
-      right: 0;
-      left: 0;
-      margin: 0;
-    }
+  .nav-menu > li + li {
+    border-top: 1px solid #ccc;
+  }
 
-    .nav-menu {
-      margin: 0;
-      padding-left: 0;
-      border: 1px solid #ccc;
-      list-style: none;
-      background-color: #000;
-      color: #fff;
-    }
+  .nav-menu > li > a {
+    display: block;
+    padding: 0.8em 1em;
+    color: #fff;
+    font-weight: normal;
+  }
 
-    .nav-menu > li + li {
-      border-top: 1px solid #ccc;
-    }
-
-    .nav-menu > li > a {
-      display: block;
-      padding: 0.8em 1em;
-      color: #fff;
-      font-weight: normal;
-    }
-
-  </style>
+</style>
 </head>
 
 <body>
 
-  <header id="header" class="page-header">
-    <div class="title">
-      <h1>Wombat Coffee Roasters</h1>
-      <div class="slogan">We love coffee</div>
-    </div>
-  </header>
+<header id="header" class="page-header">
+  <div class="title">
+    <h1>Wombat Coffee Roasters</h1>
+    <div class="slogan">We love coffee</div>
+  </div>
+</header>
 
-  <nav class="menu" id="main-menu">
-    <button class="menu-toggle" id="toggle-menu">
-      toggle menu
-    </button>
-    <div class="menu-dropdown">
-      <ul class="nav-menu">
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/shop.html">Shop</a></li>
-        <li><a href="/menu.html">Menu</a></li>
-        <li><a href="/brew.html">Brew</a></li>
-      </ul>
-    </div>
-  </nav>
+<nav class="menu" id="main-menu">
+  <button class="menu-toggle" id="toggle-menu">
+    toggle menu
+  </button>
+  <div class="menu-dropdown">
+    <ul class="nav-menu">
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/shop.html">Shop</a></li>
+      <li><a href="/menu.html">Menu</a></li>
+      <li><a href="/brew.html">Brew</a></li>
+    </ul>
+  </div>
+</nav>
 
-  <aside id="hero" class="hero">
-    Welcome to Wombat Coffee Roasters! We are
-    passionate about our craft, striving to bring you
-    the best hand-crafted coffee in the city.
-  </aside>
+<aside id="hero" class="hero">
+  Welcome to Wombat Coffee Roasters! We are
+  passionate about our craft, striving to bring you
+  the best hand-crafted coffee in the city.
+</aside>
 
-  <main id="main">
-    <div class="row">
-      <section class="column">
-        <h2 class="subtitle">Single-origin</h2>
-        <p>We have built partnerships with small farms
-          around the world to hand-select beans at the
-          peak of season. We then careful roast in
-          <a href="/batch-size.html">small batches</a>
-          to maximize their potential.</p>
-      </section>
-      <section class="column">
-        <h2 class="subtitle">Blends</h2>
-        <p>Our tasters have put together a selection of
-          carefully balanced blends. Our famous
-          <a href="/house-blend.html">house blend</a>
-          is available year round.</p>
-      </section>
-      <section class="column">
-        <h2 class="subtitle">Brewing Equipment</h2>
-        <p>We offer our favorite kettles, French
-          presses, and pour-over cones. Come to one of
-          our <a href="/classes.html">brewing
-          classes</a> to learn how to brew the perfect
-          pour-over cup.</p>
-      </section>
-    </div>
-  </main>
+<main id="main">
+  <div class="row">
+    <section class="column">
+      <h2 class="subtitle">Single-origin</h2>
+      <p>We have built partnerships with small farms
+        around the world to hand-select beans at the
+        peak of season. We then careful roast in
+        <a href="/batch-size.html">small batches</a>
+        to maximize their potential.</p>
+    </section>
+    <section class="column">
+      <h2 class="subtitle">Blends</h2>
+      <p>Our tasters have put together a selection of
+        carefully balanced blends. Our famous
+        <a href="/house-blend.html">house blend</a>
+        is available year round.</p>
+    </section>
+    <section class="column">
+      <h2 class="subtitle">Brewing Equipment</h2>
+      <p>We offer our favorite kettles, French
+        presses, and pour-over cones. Come to one of
+        our <a href="/classes.html">brewing
+        classes</a> to learn how to brew the perfect
+        pour-over cup.</p>
+    </section>
+  </div>
+</main>
 
-  <script type="text/javascript">
-    (function () {
-      var menuButton = document.getElementById('toggle-menu');
-      menuButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        var menu = document.getElementById('main-menu');
-        menu.classList.toggle('is-open');
-      });
-    })();
-  </script>
+<script type="text/javascript">
+  (function () {
+    var menuButton = document.getElementById('toggle-menu');
+    menuButton.addEventListener('click', function(event) {
+      event.preventDefault();
+      var menu = document.getElementById('main-menu');
+      menu.classList.toggle('is-open');
+    });
+  })();
+</script>
 
 </body>
 </html>

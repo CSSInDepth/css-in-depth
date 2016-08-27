@@ -1,4 +1,4 @@
-# css-in-depth
+# CSS in Depth
 Code listings from [CSS In Depth](https://manning.com/books/css-in-depth) by Keith J. Grant
 
 ![CSS in Depth book cover](cover.png)

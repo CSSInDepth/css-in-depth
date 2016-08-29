@@ -3,21 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wombat Coffee Roasters</title>
+  <title>Responsive table example</title>
   <style>
-    img {
-      max-width: 100%;
+    table {
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 0.3em 0.5em;
+    }
+
+
+    table {
+      width: 100%;
+    }
+
+    @media (max-width: 30em) {
+      table, thead, tbody, tr, th, td {
+        display: block;
+      }
+
+      thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+
+      tr {
+        margin-bottom: 1em;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <img alt="A white coffee mug on a bed of coffee beans"
-       src="coffee-beans-small.jpg"
-       srcset="coffee-beans-small.jpg 560w,
-               coffee-beans-medium.jpg 800w,
-               coffee-beans.jpg 1280w">
+  <table>
+    <thead>
+      <tr>
+        <th>Country</th>
+        <th>Region/Farm</th>
+        <th>Tasting notes</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Nicaragua</td>
+        <td>Matagulpa</td>
+        <td>Dark chocolate, almond</td>
+        <td>$13.95</td>
+      </tr>
+      <tr>
+        <td>Ethiopia</td>
+        <td>Yirgacheffe</td>
+        <td>Sweet tea, blueberry</td>
+        <td>$15.95</td>
+      </tr>
+      <tr>
+        <td>Ethiopia</td>
+        <td>Nano Challa</td>
+        <td>Tangerine, jasmine</td>
+        <td>$14.95</td>
+      </tr>
+    </tbody>
+  </table>
 
 </body>
 </html>

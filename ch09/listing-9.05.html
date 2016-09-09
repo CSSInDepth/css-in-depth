@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    body * + * {
+      margin-top: 1em;
+    }
+
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .message {
+      padding: 0.8em 1.2em;
+      border-radius: 0.2em;
+      border: 1px solid #265559;
+      color: #265559;
+      background-color: #e0f0f2;
+    }
+
+    .message--success {
+      color: #2f5926;
+      border-color: #2f5926;
+      background-color:  #cfe8c9;
+    }
+
+    .message--warning {
+      color: #594826;
+      border-color: #594826;
+      background-color:  #e8dec9;
+    }
+
+    .message--error {
+      color: #59262f;
+      border-color: #59262f;
+      background-color:  #e8c9cf;
+    }
+
+    .button {
+      padding: 0.5em 0.8em;
+      border: 1px solid #265559;
+      border-radius: 0.4em;
+      background-color: transparent;
+      font-size: 1rem;
+    }
+
+    .button--success {
+      border-color: #cfe8c9;
+      color: #fff;
+      background-color: #2f5926;
+    }
+
+    .button--danger {
+      border-color: #e8c9cf;
+      color: #fff;
+      background-color: #59262f;
+    }
+
+    .button--small {
+      font-size: 0.8rem;
+    }
+
+    .button--large {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="button button--large">Read more</button>
+  <button class="button button--success">Save</button>
+  <button class="button button--danger button--small">Cancel</button>
+</body>

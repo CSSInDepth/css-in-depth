@@ -14,10 +14,6 @@
       box-sizing: inherit;
     }
 
-    body * + * {
-      margin-top: 1em;
-    }
-
     body {
       font-family: Helvetica, Arial, sans-serif;
     }
@@ -29,12 +25,37 @@
       color: #265559;
       background-color: #e0f0f2;
     }
+
+    .message--success {
+      color: #2f5926;
+      border-color: #2f5926;
+      background-color:  #cfe8c9;
+    }
+
+    .message--warning {
+      color: #594826;
+      border-color: #594826;
+      background-color:  #e8dec9;
+    }
+
+    .message--error {
+      color: #59262f;
+      border-color: #59262f;
+      background-color:  #e8c9cf;
+    }
   </style>
 </head>
 
 <body>
-  <div class="message">
+  <div class="message message--success">
     Save successful
   </div>
 
+  <div class="message message--warning">
+    Password strength: Weak
+  </div>
+
+  <div class="message message--error">
+    Invalid password
+  </div>
 </body>

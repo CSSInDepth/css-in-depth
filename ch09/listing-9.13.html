@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .dropdown {
+      display: inline-block;
+      position: relative;
+    }
+
+    .dropdown__toggle {
+      padding: 0.5em 2em 0.5em 1.5em;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      background-color: #eee;
+    }
+
+    .dropdown__toggle::after {
+      content: "";
+      position: absolute;
+      right: 1em;
+      top: 1em;
+      border: 0.3em solid;
+      border-color: black transparent transparent;
+    }
+
+    .dropdown__drawer {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 2.1em;
+      min-width: 100%;
+      background-color: #eee;
+    }
+
+    .dropdown.is-open .dropdown__toggle::after {
+      top: 0.7em;
+      border-color: transparent transparent black;
+    }
+    .dropdown.is-open .dropdown__drawer {
+      display: block;
+    }
+
+    .menu {
+      padding-left: 0;
+      margin: 0;
+      list-style-type: none;
+      border: 1px solid #999;
+    }
+
+    .menu > li + li {
+      border-top: 1px solid #999;
+    }
+
+    .menu > li > a {
+      display: block;
+      padding: 0.5em 1.5em;
+      background-color: #eee;
+      color: #369;
+      text-decoration: none;
+    }
+
+    .menu > li > a:hover {
+      background-color: #fff;
+    }
+
+  </style>
+</head>
+
+<body>
+<div class="dropdown">
+  <button class="dropdown__toggle">Main Menu</button>
+  <div class="dropdown__drawer">
+    <ul class="menu">
+      <li><a href="/">Home</a></li>
+      <li><a href="/coffees">Coffees</a></li>
+      <li><a href="/brewers">Brewers</a></li>
+      <li><a href="/specials">Specials</a></li>
+      <li><a href="/about">About us</a></li>
+    </ul>
+  </div>
+</div>
+
+<script type="text/javascript">
+  (function () {
+    var toggle = document.querySelector('.dropdown__toggle');
+    toggle.addEventListener('click', function (event) {
+      event.preventDefault();
+      var dropdown = event.target.parentNode;
+      dropdown.classList.toggle('is-open');
+    });
+  }());
+</script>
+</body>

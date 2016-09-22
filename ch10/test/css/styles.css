@@ -1,0 +1,277 @@
+:root {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+}
+
+body {
+  margin: 0;
+}
+
+/*
+Message
+
+Markup:
+<div class="message {{modifier_class}}">
+  This is an important message
+</div>
+
+.message--success   - A green success message
+.message--warning   - An orange warning message
+.message--error     - A red error message
+
+Style guide Message
+*/
+.message {
+  padding: 0.8em 1.2em;
+  border-radius: 0.2em;
+  border: 1px solid #265559;
+  color: #265559;
+  background-color: #e0f0f2;
+}
+
+.message--success {
+  color: #2f5926;
+  border-color: #2f5926;
+  background-color:  #cfe8c9;
+}
+
+.message--warning {
+  color: #594826;
+  border-color: #594826;
+  background-color:  #e8dec9;
+}
+
+.message--error {
+  color: #59262f;
+  border-color: #59262f;
+  background-color:  #e8c9cf;
+}
+
+/*
+Buttons
+
+Buttons are available in a number of sizes and colors. You may mix and match any size with any color.
+
+Markup:
+<button class="button {{modifier_class}}">click here</button>
+
+.button--success  - A green success button
+.button--danger   - A red danger button
+.button--small    - A small button
+.button--large    - A large button
+
+Style guide Buttons
+*/
+.button {
+  padding: 0.5em 0.8em;
+  border: 1px solid #265559;
+  border-radius: 0.4em;
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+.button--success {
+  border-color: #cfe8c9;
+  color: #fff;
+  background-color: #2f5926;
+}
+
+.button--danger {
+  border-color: #e8c9cf;
+  color: #fff;
+  background-color: #59262f;
+}
+
+.button--small {
+  font-size: 0.8rem;
+}
+
+.button--large {
+  font-size: 1.2rem;
+}
+
+/*
+Media object
+
+Markup:
+<div class="media">
+  <img class="media__image" src="images/runner.jpg" />
+  <div class="media__body">
+    <h4>Strength</h4>
+    <p>
+      Strength training is an important part of
+      injury prevention. Focus on your core&mdash;
+      especially your abs and glutes.
+    </p>
+  </div>
+</div>
+
+Style guide Media-object
+*/
+.media {
+  padding: 1.5em;
+  background-color: #eee;
+  border-radius: 0.5em;
+}
+.media::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.media__image {
+  float: left;
+  margin-right: 1.5em;
+}
+
+.media__body {
+  overflow: auto;
+  margin-top: 0;
+}
+
+.media__body > h4 {
+  margin-top: 0;
+}
+
+.media--right > .media__image {
+  float: right;
+}
+
+/*
+Dropdown
+
+A dropdown menu. Clicking the toggle button opens and closes the drawer.
+
+Markup:
+<div class="dropdown">
+  <button class="dropdown__toggle">Open menu</button>
+  <div class="dropdown__drawer">
+    Drawer contents
+  </div>
+</div>
+
+Style guide Dropdown
+*/
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown__toggle {
+  padding: 0.5em 2em 0.5em 1.5em;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #eee;
+}
+
+.dropdown__toggle::after {
+  content: "";
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  border: 0.3em solid;
+  border-color: black transparent transparent;
+}
+
+.dropdown__drawer {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 2.1em;
+  min-width: 100%;
+  background-color: #eee;
+}
+
+.dropdown.is-open .dropdown__toggle::after {
+  top: 0.7em;
+  border-color: transparent transparent black;
+}
+.dropdown.is-open .dropdown__drawer {
+  display: block;
+}
+
+/*
+Menu
+
+Markup:
+<ul class="menu">
+  <li><a href="#">Menu item 1</a></li>
+  <li><a href="#">Menu item 2</a></li>
+  <li><a href="#">Menu item 3</a></li>
+</ul>
+
+Style guide Menu
+*/
+.menu {
+  padding-left: 0;
+  margin: 0;
+  list-style-type: none;
+  border: 1px solid #999;
+}
+
+.menu > li + li {
+  border-top: 1px solid #999;
+}
+
+.menu > li > a {
+  display: block;
+  padding: 0.5em 1.5em;
+  background-color: #eee;
+  color: #369;
+  text-decoration: none;
+}
+
+.menu > li > a:hover {
+  background-color: #fff;
+}
+
+/*
+Text center
+
+Center text within a block by applying `text-center`
+
+Markup:
+<p class="text-center">Centered text</p>
+
+Style guide Utilities.text-center
+*/
+.text-center {
+  text-align: center !important;
+}
+
+/*
+Float left
+
+Float an element to the left with `float-left`
+
+Style guide Utilities.float-left
+*/
+.float-left {
+  float: left;
+}
+
+/*
+Clearfix
+
+Add the class `clearfix` to an element to force it to contain its floated contents
+
+Markup:
+<div class="clearfix">
+  <span class="float-left">floated</span>
+</div>
+
+Style guide Utilities.clearfix
+*/
+.clearfix::before,
+.clearfix::after {
+    content: " ";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.hidden {
+  display: none !important;
+}

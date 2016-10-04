@@ -1,0 +1,20 @@
+{
+  // These configuration options override those in the root .eslintrc file.
+  "env": {
+    "mocha": true
+  },
+  "globals": {
+    "chai": true,
+    "expect": true,
+    "fs": true,
+    "helperUtils": true,
+    "kss": true,
+    "path": true,
+    "Promise": true
+  },
+  "rules": {
+    // Disabled.
+    // Chai assertions are "unused" expressions.
+    "no-unused-expressions": 0
+  }
+}

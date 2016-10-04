@@ -1,0 +1,28 @@
+{
+  "source": {
+    "include": [
+      "lib",
+      "builder"
+    ],
+    "exclude": [
+      "builder/base/example",
+      "builder/handlebars/kss-assets",
+      "builder/handlebars/node_modules",
+      "builder/twig/kss-assets",
+      "builder/twig/node_modules"
+    ]
+  },
+  "opts": {
+    "destination": "./gh-pages/api/master/",
+    "readme": "./gh-pages/api-homepage.md",
+    "recurse": true,
+    "verbose": true
+  },
+  "plugins": [
+    "plugins/markdown"
+  ],
+  "templates": {},
+  "tags": {
+    "allowUnknownTags": false
+  }
+}

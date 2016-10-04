@@ -1,0 +1,15 @@
+{
+  "name": "pattern-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "kss --config kss-config.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Keith J. Grant",
+  "devDependencies": {
+    "kss": "^3.0.0-beta.14"
+  }
+}

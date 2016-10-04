@@ -1,0 +1,10 @@
+{{!-- Handlebars partials can nest other section's partials. --}}
+<form>
+<p>{{> "demo.forms.text.single-line" }}</p>
+{{> "demo.forms.text.label-pairs" }}
+
+
+<p>
+{{> "buttons" }}
+</p>
+</form>

@@ -1,0 +1,64 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/*
+Media
+
+Displays an image on the left and body content
+on the right.
+
+Markup:
+<div class="media">
+  <img class="media__image"
+    src="http://placehold.it/150x150" />
+  <div class="media__body">
+    <h4>Strength</h4>
+    <p>
+      Strength training is an important part of
+      injury prevention. Focus on your core&mdash;
+      especially your abs and glutes.
+    </p>
+  </div>
+</div>
+
+Style guide Media
+*/
+.media {
+  padding: 1.5em;
+  background-color: #eee;
+  border-radius: 0.5em;
+}
+.media::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.media__image {
+  float: left;
+  margin-right: 1.5em;
+}
+
+.media__body {
+  overflow: auto;
+  margin-top: 0;
+}
+
+.media__body > h4 {
+  margin-top: 0;
+}
+
+.media--right > .media__image {
+  float: right;
+}

@@ -1,0 +1,82 @@
+// Buttons
+//
+// Styleguide 2
+
+@import "buttons";
+
+// Star buttons
+//
+// Styleguide 2.1.
+
+// A button suitable for giving stars to someone.
+//
+//     Testing indentation for Markdown code.
+//
+// Markup:
+// <h2>Handlebars markup Helper: {{modifier_class}}</h2>
+//
+// :hover             - Subtle hover highlight.
+// .stars-given       - A highlight indicating you've already given a star.
+// .stars-given:hover - Subtle hover highlight on top of stars-given styling.
+// .disabled          - Dims the button to indicate it cannot be used.
+//
+// Styleguide 2.1.3.
+a.button.star{
+  background:#ddd;
+
+  &.star-given{
+  }
+  &.disabled{
+  }
+}
+
+// A button suitable for giving stars to someone.
+//
+// :hover             - Subtle hover highlight.
+// .stars-given       - A highlight indicating you've already given a star.
+// .stars-given:hover - Subtle hover highlight on top of stars-given styling.
+// .disabled          - Dims the button to indicate it cannot be used.
+//
+// Styleguide 2.1.4.
+a.button.star{
+  background:#ddd;
+
+  &.star-given{
+  }
+  &.disabled{
+  }
+}
+
+// Section 3
+//
+// Section 3 has been successfully loaded.
+//
+// Styleguide 3
+
+// Forms
+//
+// Markup: forms.hbs
+//
+// Styleguide 3.1
+
+// Single-Line Text Boxes
+//
+// Markup:
+// <input type="text" class="{{modifier_class}}" value="Text"/>
+// Nested Handlebars partial part 1:
+//
+// Styleguide 3.1.1
+
+// Submit button
+//
+// Markup: button.hbs
+//
+// Styleguide 3.1.2
+
+// Custom properties
+//
+// Custom: This is the first custom property.
+//
+// Custom2: This is the second custom property.
+//
+// Styleguide 4.1

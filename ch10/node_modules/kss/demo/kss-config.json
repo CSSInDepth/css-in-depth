@@ -1,0 +1,13 @@
+{
+  "//": "The source and destination paths are relative to this file.",
+  "source": ".",
+
+  "//": "The css and js paths are URLs relative to the style guide destination.",
+  "css": [
+    "styles.css"
+  ],
+  "js": [],
+
+  "title": "kss-node Style Guide",
+  "verbose": true
+}

@@ -1,0 +1,16 @@
+# Ignore any installed node modules.
+**/node_modules/**
+
+# Ignore any builder assets.
+builder/*/kss-assets/*.js
+
+# Ignore the demo pages.
+demo/**
+gh-pages/**
+styleguide/**
+
+# Ignore old test runs.
+test/output/**
+
+# Ignore test coverage reports
+coverage/**

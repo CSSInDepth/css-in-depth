@@ -1,6 +1,0 @@
-{
-  "//"          : "A JSON comment",
-  "source"      : "source-twig-builder-test",
-  "destination" : "../output/nested",
-  "builder"     : "cli-option-config.json"
-}

@@ -1,6 +1,0 @@
-{
-  "//"          : "A JSON comment",
-  "source"      : ["with-include", "missing-homepage"],
-  "destination" : "../output/nested",
-  "builder"     : "builder"
-}

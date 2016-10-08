@@ -1,5 +1,0 @@
-#!/usr/bin/env node
-
-'use strict';
-
-console.error('The "kss-node" tool name is deprecated; use "kss" instead.');

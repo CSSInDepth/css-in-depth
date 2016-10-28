@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .text-center {
+      text-align: center !important;
+    }
+
+    .float-left {
+      float: left;
+    }
+
+    .clearfix::before,
+    .clearfix::after {
+        content: " ";
+        display: table;
+    }
+
+    .clearfix::after {
+        clear: both;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="text-center">
+    Centered text
+  </div>
+  <p class="clearfix">
+    <img src="runner.png" class="float-left" />
+    A paragraph that, if long enough, would wrap around the image.
+  </p>
+</body>

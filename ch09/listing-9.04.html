@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .message {
+      padding: 0.8em 1.2em;
+      border-radius: 0.2em;
+      border: 1px solid #265559;
+      color: #265559;
+      background-color: #e0f0f2;
+    }
+
+    .message--success {
+      color: #2f5926;
+      border-color: #2f5926;
+      background-color:  #cfe8c9;
+    }
+
+    .message--warning {
+      color: #594826;
+      border-color: #594826;
+      background-color:  #e8dec9;
+    }
+
+    .message--error {
+      color: #59262f;
+      border-color: #59262f;
+      background-color:  #e8c9cf;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="message message--success">
+    Save successful
+  </div>
+
+  <div class="message message--warning">
+    Password strength: Weak
+  </div>
+
+  <div class="message message--error">
+    Invalid password
+  </div>
+</body>

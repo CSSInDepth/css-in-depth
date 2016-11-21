@@ -1,0 +1,96 @@
+<!doctype html>
+<head>
+  <style>
+    :root {
+      box-sizing: border-box;
+    }
+
+    *,
+    ::before,
+    ::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      background-color: #709b90;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .portfolio > figure {
+      display: inline-block;
+      max-width: 300px;
+      margin: 0;
+    }
+
+    .portfolio img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    .portfolio figcaption {
+      padding: 0.3em 0.8em;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      text-align: right;
+    }
+
+    @supports (display: grid) {
+      .portfolio {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-auto-rows: 1fr;
+        grid-gap: 1em;
+        grid-auto-flow: dense;
+      }
+
+      .portfolio > figure {
+        display: flex;
+        flex-direction: column;
+        max-width: initial;
+      }
+
+      .portfolio img {
+        flex: 1;
+      }
+
+      .portfolio .featured {
+        grid-row: span 2;
+        grid-column: span 2;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="portfolio">
+    <figure class="featured">
+      <img src="images/monkey.jpg" alt="monkey" />
+      <figcaption>Monkey</figcaption>
+    </figure>
+    <figure>
+      <img src="images/eagle.jpg" alt="eagle" />
+      <figcaption>Eagle</figcaption>
+    </figure>
+    <figure class="featured">
+      <img src="images/bird.jpg" alt="bird" />
+      <figcaption>Bird</figcaption>
+    </figure>
+    <figure>
+      <img src="images/bear.jpg" alt="bear" />
+      <figcaption>Bear</figcaption>
+    </figure>
+    <figure class="featured">
+      <img src="images/swan.jpg" alt="swan" />
+      <figcaption>Swan</figcaption>
+    </figure>
+    <figure>
+      <img src="images/elephants.jpg" alt="elephants" />
+      <figcaption>Elephants</figcaption>
+    </figure>
+    <figure>
+      <img src="images/owl.jpg" alt="owl" />
+      <figcaption>Owl</figcaption>
+    </figure>
+  </div>
+</body>

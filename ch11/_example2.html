@@ -24,7 +24,7 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: -30vw, 30vw;
-      background-blend-mode: overlay;
+      background-blend-mode: multiply;
     }
 
     .ex3 {
@@ -35,6 +35,12 @@
       background-repeat: no-repeat;;
       background-position: center center;
       background-blend-mode: luminosity;
+    }
+
+    .ex3b {
+      background-color: transparent;
+      background-image: linear-gradient(to right, #148, #148), url("images/bear.jpg");
+      background-blend-mode: color;
     }
 
     .ex4 {
@@ -72,6 +78,7 @@
   <div class="ex"></div>
   <div class="ex2"></div>
   <div class="ex3"></div>
+  <div class="ex3 ex3b"></div>
   <div class="ex4">
     <h1>Ursa Major</h1>
   </div>

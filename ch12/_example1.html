@@ -1,10 +1,65 @@
 <!doctype html>
 <head>
   <style>
+html {
+  box-sizing: border-box;
+  color: #212529;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
+  margin: 0;
   font-family: Helvetica, Arial, sans-serif;
 }
 
+h1, h2, h3, h4 {
+  font-family: Georgia, serif;
+}
+
+.nav-container {
+  background: #20c997;
+  padding: 0.3em 0;
+}
+.top-nav {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0.2em;
+  list-style-type: none;
+}
+.top-nav > li + li {
+  margin-left: 10px;
+}
+.top-nav a {
+  display: block;
+  padding: 0.3em 1.25em;
+  color: white;
+  background: #0ca678;
+  text-decoration: none;
+  border-radius: 3px;
+}
+.top-nav__featured > a {
+  color: #495057;
+  background: white;
+}
+
+.hero {
+  background: url(collaboration.jpg) no-repeat;
+  background-size: cover;
+  padding: 40px 0 330px;
+}
+.hero__slogan {
+  max-width: 1080px;
+  margin: 0 auto;
+  font-size: 1.95rem; /* 2.44 */
+  text-align: right;
+  padding-right: 205px;
+}
 
 .tile-row {
   display: flex;
@@ -31,8 +86,17 @@ body {
 </head>
 
 <body>
+  <nav class="nav-container">
+    <ul class="top-nav">
+      <li><a href="/">Ink</a></li>
+      <li><a href="/features">Features</a></li>
+      <li><a href="/pricing">Pricing</a></li>
+      <li><a href="/support">Support</a></li>
+      <li class="top-nav__featured"><a href="/login">Login</a></li>
+    </ul>
+  </nav>
   <div class="hero">
-
+    <h2 class="hero__slogan">Team collaboration done right</h2>
   </div>
 
   <div class="container">

@@ -14,10 +14,25 @@ html {
 body {
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  background-color: #f8f9fa;
 }
 
 h1, h2, h3, h4 {
   font-family: Georgia, serif;
+}
+
+a:link {
+  color: #20c997;
+}
+a:visited {
+  color: #0ca678;
+}
+a:hover {
+  color: #0ca678;
+}
+a:active {
+  color: #c92a2a;
 }
 
 .nav-container {
@@ -43,15 +58,33 @@ h1, h2, h3, h4 {
   text-decoration: none;
   border-radius: 3px;
 }
+.top-nav a:hover {
+  background-color: #099268;
+}
+.top-nav__home {
+  margin-right: auto;
+}
+.top-nav__home > a {
+  padding: 0;
+  color: black;
+  background: initial;
+  font-size: 1.6em;
+  font-family: Georgia;
+  font-weight: bold;
+}
 .top-nav__featured > a {
   color: #495057;
-  background: white;
+  background: #e6fcf5;
+}
+.top-nav__featured > a:hover {
+  background: #c3fae8;
 }
 
 .hero {
   background: url(collaboration.jpg) no-repeat;
   background-size: cover;
   padding: 40px 0 330px;
+  margin-bottom: 2.5rem;
 }
 .hero__slogan {
   max-width: 1080px;
@@ -59,6 +92,11 @@ h1, h2, h3, h4 {
   font-size: 1.95rem; /* 2.44 */
   text-align: right;
   padding-right: 205px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1080px;
 }
 
 .tile-row {
@@ -71,16 +109,39 @@ h1, h2, h3, h4 {
   margin-left: 1.5em;
 }
 
-.container {
+.tile {
+  background-color: #fff;
+  border-radius: 0.3em;
+  padding: 1.25em 1.56em;
+}
+.tile > :first-child {
+  margin-top: 0;
+}
+
+.tag-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+.tag-list > li {
+  display: inline;
+  padding: 0.3rem 0.5rem;
+  background-color: #f1f3f5;
+  font-size: 0.8rem;
+  border-radius: 0.2rem;
+  line-height: 2.6;
+}
+
+.page-footer {
+  margin-top: 3em;
+  padding: 1em 0;
+  background-color: #f1f3f5;
+  color: #868e96;
+}
+.page-footer__inner {
   margin: 0 auto;
   max-width: 1080px;
-}
-
-.image-tile {
-
-}
-.image-tile > img {
-  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
 }
   </style>
 </head>
@@ -88,7 +149,7 @@ h1, h2, h3, h4 {
 <body>
   <nav class="nav-container">
     <ul class="top-nav">
-      <li><a href="/">Ink</a></li>
+      <li class="top-nav__home"><a href="/">Ink</a></li>
       <li><a href="/features">Features</a></li>
       <li><a href="/pricing">Pricing</a></li>
       <li><a href="/support">Support</a></li>
@@ -101,50 +162,35 @@ h1, h2, h3, h4 {
 
   <div class="container">
     <div class="tile-row">
-      <div class="image-tile">
-        <img src="http://placehold.it/400x200" />
-        <div class="image-tile__body">
-          <h4>Fizzbuzz</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac faucibus enim. Donec mollis finibus leo a auctor. Pellentesque lobortis interdum odio at mollis. Nunc in sapien orci. Curabitur ullamcorper nunc odio, nec suscipit nibh venenatis at. Ut molestie imperdiet arcu, sed gravida ante gravida vitae.</p>
-          <ul class="tag-list">
-            <li>flib</li>
-            <li>flab</li>
-            <li>flobblib</li>
-            <li>flobbity bo</li>
-          </ul>
-          <a href="fizzbuzz.html" class="button">Read more</a>
-        </div>
+      <div class="tile">
+        <h4>Work together, even if you're apart</h4>
+        <p>Organize your team conversations into threads. Collaborate together on documents in real-time. Use face-to-face video calls when typing just won't do.</p>
+        <a href="/collaboration" class="button">Read more</a>
       </div>
 
-      <div class="image-tile">
-        <img src="http://placehold.it/400x200" />
-        <div class="image-tile__body">
-          <h4>Fizzbuzz</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac faucibus enim. Donec mollis finibus leo a auctor. Pellentesque lobortis interdum odio at mollis. Nunc in sapien orci. Curabitur ullamcorper nunc odio, nec suscipit nibh venenatis at. Ut molestie imperdiet arcu, sed gravida ante gravida vitae.</p>
-          <ul class="tag-list">
-            <li>flib</li>
-            <li>flab</li>
-            <li>flobblib</li>
-            <li>flobbity bo</li>
-          </ul>
-          <a href="fizzbuzz.html" class="button">Read more</a>
-        </div>
+      <div class="tile">
+        <h4>Take it with you</h4>
+        <p>Ink is available on a wide array of devices, so you can work from anywhere:</p>
+        <ul class="tag-list">
+          <li>Web</li>
+          <li>iOS</li>
+          <li>Android</li>
+          <li>Windows Phone</li>
+        </ul>
+        <a href="/supported-devices" class="button">Read more</a>
       </div>
 
-      <div class="image-tile">
-        <img src="http://placehold.it/400x200" />
-        <div class="image-tile__body">
-          <h4>Fizzbuzz</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac faucibus enim. Donec mollis finibus leo a auctor. Pellentesque lobortis interdum odio at mollis. Nunc in sapien orci. Curabitur ullamcorper nunc odio, nec suscipit nibh venenatis at. Ut molestie imperdiet arcu, sed gravida ante gravida vitae.</p>
-          <ul class="tag-list">
-            <li>flib</li>
-            <li>flab</li>
-            <li>flobblib</li>
-            <li>flobbity bo</li>
-          </ul>
-          <a href="fizzbuzz.html" class="button">Read more</a>
-        </div>
+      <div class="tile">
+        <h4>Priced right</h4>
+        <p>Whether you work on a team of three or a three hundred, you'll find our tiered pricing reasonable at every level.</p>
+        <a href="/pricing" class="button">Read more</a>
       </div>
     </div>
   </div>
+
+  <footer class="page-footer">
+    <div class="page-footer__inner">
+      Copyright &copy; 2017 Ink, Inc.
+    </div>
+  </footer>
 </body>

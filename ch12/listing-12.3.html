@@ -1,0 +1,97 @@
+<!doctype html>
+<head>
+  <style>
+html {
+  --brand-green: hsl(162, 87%, 21%);
+  --dark-green: hsl(162, 88%, 30%);
+  --medium-green: hsl(162, 73%, 46%);
+  --text-color: hsl(210, 11%, 15%);
+  --gray: hsl(210, 7%, 56%);
+  --light-gray: hsl(210, 17%, 95%);
+  --extra-light-gray: hsl(210, 17%, 98%);
+  --white: hsl(0, 0%, 100%);
+
+  box-sizing: border-box;
+  color: var(--text-color);
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  background-color: var(--extra-light-gray);
+}
+
+h1, h2, h3, h4 {
+  font-family: Georgia, serif;
+}
+
+a {
+  color: var(--medium-green);
+}
+a:visited {
+  color: var(--brand-green);
+}
+a:hover {
+  color: var(--brand-green);
+}
+a:active {
+}
+  </style>
+</head>
+<body>
+  <nav class="nav-container">
+    <ul class="top-nav">
+      <li class="top-nav__home"><a href="/">Ink</a></li>
+      <li><a href="/features">Features</a></li>
+      <li><a href="/pricing">Pricing</a></li>
+      <li><a href="/support">Support</a></li>
+      <li class="top-nav__featured"><a href="/login">Login</a></li>
+    </ul>
+  </nav>
+  <div class="hero">
+    <div class="hero__inner">
+      <h2>Team collaboration done right</h2>
+      <a href="/sign-up" class="button button--cta">Get started</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="tile-row">
+      <div class="tile">
+        <h4>Work together, even if you're apart</h4>
+        <p>Organize your team conversations into threads. Collaborate together on documents in real-time. Use face-to-face video calls when typing just won't do.</p>
+        <a href="/collaboration" class="button">Read more</a>
+      </div>
+
+      <div class="tile">
+        <h4>Take it with you</h4>
+        <p>Ink is available on a wide array of devices, so you can work from anywhere:</p>
+        <ul class="tag-list">
+          <li>Web</li>
+          <li>iOS</li>
+          <li>Android</li>
+          <li>Windows Phone</li>
+        </ul>
+        <a href="/supported-devices" class="button">Read more</a>
+      </div>
+
+      <div class="tile">
+        <h4>Priced right</h4>
+        <p>Whether you work on a team of three or a three hundred, you'll find our tiered pricing reasonable at every level.</p>
+        <a href="/pricing" class="button">Read more</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-footer">
+    <div class="page-footer__inner">
+      Copyright &copy; 2017 Ink, Inc.
+    </div>
+  </footer>
+</body>

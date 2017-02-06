@@ -111,14 +111,33 @@ a:active {
 }
 .button:hover {
   background-color: hsl(162, 88%, 30%);
-  color: var(--white);
+  color: white;
 }
 .button--cta {
   padding: 0.6em 1em;
   background-color: hsl(162, 87%, 21%);
-  color: var(--white);
+  color: white;
   border: none;
 }
+
+
+.container {
+  margin: 0 auto;
+  max-width: 1080px;
+}
+
+.tile-row {
+  display: flex;
+}
+.tile-row > * {
+  flex: 1;
+}
+
+.tile {
+  background-color: #fff;
+  border-radius: 0.3em;
+}
+
 
   </style>
 </head>

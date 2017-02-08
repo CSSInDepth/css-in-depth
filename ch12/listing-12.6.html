@@ -2,14 +2,14 @@
 <head>
   <style>
 html {
-  --brand-green: #076448;
-  --dark-green: #099268;
-  --medium-green: #20c997;
-  --text-color: #212529;
-  --gray: #868e96;
-  --light-gray: #f1f3f5;
-  --extra-light-gray: #f8f9fa;
-  --white: #fff;
+  --brand-green: hsl(162, 87%, 21%);
+  --dark-green: hsl(162, 88%, 30%);
+  --medium-green: hsl(162, 73%, 46%);
+  --text-color: hsl(210, 11%, 15%);
+  --gray: hsl(210, 7%, 56%);
+  --light-gray: hsl(210, 17%, 95%);
+  --extra-light-gray: hsl(210, 17%, 98%);
+  --white: hsl(0, 0%, 100%);
 
   box-sizing: border-box;
   color: var(--text-color);
@@ -134,13 +134,15 @@ a:active {
 }
 
 .tile {
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 0.3em;
 }
 
 .page-footer {
-  background-color: #f1f3f5;
-  color: #868e96;
+  margin-top: 3em;
+  padding: 1em 0;
+  background-color: var(--light-gray);
+  color: var(--gray);
 }
 .page-footer__inner {
   margin: 0 auto;
@@ -148,7 +150,6 @@ a:active {
   text-align: center;
   font-size: 0.8rem;
 }
-
   </style>
 </head>
 <body>

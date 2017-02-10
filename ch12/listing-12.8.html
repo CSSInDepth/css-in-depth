@@ -1,0 +1,214 @@
+<!doctype html>
+<head>
+  <style>
+html {
+  --brand-green: hsl(162, 87%, 21%);
+  --dark-green: hsl(162, 88%, 30%);
+  --medium-green: hsl(162, 73%, 46%);
+  --text-color: hsl(210, 11%, 15%);
+  --gray: hsl(210, 7%, 56%);
+  --light-gray: hsl(210, 17%, 95%);
+  --extra-light-gray: hsl(210, 17%, 98%);
+  --white: hsl(0, 0%, 100%);
+  --red: hsl(342, 63%, 46%);
+
+  box-sizing: border-box;
+  color: var(--text-color);
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  background-color: var(--extra-light-gray);
+}
+
+h1, h2, h3, h4 {
+  font-family: Georgia, serif;
+}
+
+a {
+  color: var(--medium-green);
+}
+a:visited {
+  color: var(--brand-green);
+}
+a:hover {
+  color: var(--brand-green);
+}
+a:active {
+  color: var(--red);
+}
+
+.nav-container {
+  background-color: var(--medium-green);
+}
+.nav-container__inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0.625em 0;
+}
+
+.home-link {
+  color: var(--text-color);
+  font-size: 1.6rem;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.top-nav {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+}
+.top-nav > li + li {
+  margin-left: 0.625em;
+}
+.top-nav a {
+  display: block;
+  padding: 0.3em 1.25em;
+  color: var(--white);
+  background: var(--brand-green);
+  text-decoration: none;
+  border-radius: 3px;
+}
+.top-nav a:hover {
+  background-color: var(--dark-green);
+}
+.top-nav__featured > a {
+  color: var(--brand-green);
+  background-color: var(--white);
+}
+.top-nav__featured > a:hover {
+  color: var(--medium-green);
+  background-color: var(--white);
+}
+
+.hero {
+  background: url(collaboration.jpg) no-repeat;
+  background-size: cover;
+  margin-bottom: 2.5rem;
+}
+.hero__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 50px 0 200px;
+  text-align: right;
+}
+.hero h2 {
+  font-size: 1.95rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.4em 1em;
+  color: hsl(162, 87%, 21%);
+  border: 2px solid hsl(162, 87%, 21%);
+  border-radius: 0.2em;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.button:hover {
+  background-color: hsl(162, 88%, 30%);
+  color: white;
+}
+.button--cta {
+  padding: 0.6em 1em;
+  background-color: hsl(162, 87%, 21%);
+  color: white;
+  border: none;
+}
+
+
+.container {
+  margin: 0 auto;
+  max-width: 1080px;
+}
+
+.tile-row {
+  display: flex;
+}
+.tile-row > * {
+  flex: 1;
+}
+
+.tile {
+  background-color: var(--white);
+  border-radius: 0.3em;
+}
+
+.page-footer {
+  margin-top: 3em;
+  padding: 1em 0;
+  background-color: var(--light-gray);
+  color: var(--gray);
+}
+.page-footer__inner {
+  margin: 0 auto;
+  max-width: 1080px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+  </style>
+</head>
+<body>
+  <nav class="nav-container">
+    <div class="nav-container__inner">
+      <a class="home-link" href="/">Ink</a>
+      <ul class="top-nav">
+        <li><a href="/features">Features</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/support">Support</a></li>
+        <li class="top-nav__featured"><a href="/login">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="hero">
+    <div class="hero__inner">
+      <h2>Team collaboration done right</h2>
+      <a href="/sign-up" class="button button--cta">Get started</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="tile-row">
+      <div class="tile">
+        <h4>Work together, even if you're apart</h4>
+        <p>Organize your team conversations into threads. Collaborate together on documents in real-time. Use face-to-face <a href="/features/video-calling">video calls</a> when typing just won't do.</p>
+        <a href="/collaboration" class="button">Read more</a>
+      </div>
+
+      <div class="tile">
+        <h4>Take it with you</h4>
+        <p>Ink is available on a wide array of devices, so you can work from anywhere:</p>
+        <ul class="tag-list">
+          <li>Web</li>
+          <li>iOS</li>
+          <li>Android</li>
+          <li>Windows Phone</li>
+        </ul>
+        <a href="/supported-devices" class="button">Read more</a>
+      </div>
+
+      <div class="tile">
+        <h4>Priced right</h4>
+        <p>Whether you work on a team of three or a three hundred, you'll find our tiered pricing reasonable at every level.</p>
+        <a href="/pricing" class="button">Read more</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-footer">
+    <div class="page-footer__inner">
+      Copyright &copy; 2017 Ink, Inc.
+    </div>
+  </footer>
+</body>

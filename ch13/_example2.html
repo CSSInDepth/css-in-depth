@@ -1,6 +1,6 @@
 <!doctype html>
 <head>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300|Sansita:800" rel="stylesheet">
+  <link href="fonts.css" rel="stylesheet">
   <style>
 html {
   --brand-green: hsl(162, 87%, 21%);
@@ -24,13 +24,23 @@ html {
 
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.4;
   background-color: var(--extra-light-gray);
 }
+.fonts-loaded body {
+  letter-spacing: 0.01em;
+}
 
 h1, h2, h3, h4 {
-  font-family: Sansita, serif;
+  font-family: Sansita, Georgia, serif;
+  letter-spacing: -0.03em;
+}
+.fonts-loaded h1,
+.fonts-loaded h2,
+.fonts-loaded h3,
+.fonts-loaded h4 {
+  letter-spacing: 0.03em;
 }
 
 a {
@@ -57,6 +67,7 @@ p {
 .nav-container__inner {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   max-width: 1080px;
   margin: 0 auto;
   padding: 0.625em 0;
@@ -65,9 +76,12 @@ p {
 .home-link {
   color: var(--text-color);
   font-size: 1.6rem;
-  font-family: Sansita, serif;
+  font-family: Sansita, Georgia, serif;
+  letter-spacing: 0.03em;
   font-weight: bold;
   text-decoration: none;
+}
+.fonts-loaded .home-link {
 }
 
 .top-nav {
@@ -80,11 +94,17 @@ p {
 }
 .top-nav a {
   display: block;
-  padding: 0.3em 1.25em;
+  font-size: 0.8rem;
+  padding: 0.3rem 1.25rem;
   color: var(--white);
   background: var(--brand-green);
-  text-decoration: none;
   border-radius: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+}
+.fonts-loaded .top-nav a {
+  letter-spacing: 0.03em;
 }
 .top-nav a:hover {
   background-color: var(--dark-green);
@@ -113,6 +133,10 @@ p {
   font-size: 1.95rem;
   margin-top: 0;
   margin-bottom: 0.625rem;
+  letter-spacing: -0.06em;
+}
+.fonts-loaded .hero h2 {
+  letter-spacing: -0.02em;
 }
 
 .button {
@@ -122,7 +146,7 @@ p {
   border: 2px solid hsl(162, 87%, 21%);
   border-radius: 0.2em;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 .button:hover {
   background-color: hsl(162, 88%, 30%);
@@ -240,4 +264,27 @@ p {
       Copyright &copy; 2017 Ink, Inc.
     </div>
   </footer>
+
+  <script type="text/javascript">
+    var html = document.documentElement;
+    var script = document.createElement("script");
+    script.src = "fontfaceobserver.js";
+    script.async = true;
+
+    script.onload = function () {
+      var roboto = new FontFaceObserver("Roboto");
+      var sansita = new FontFaceObserver("Sansita");
+      var timeoutLength = 3000;
+
+      Promise.all([
+        roboto.load(null, timeoutLength),
+        sansita.load(null, timeoutLength)
+      ]).then(function () {
+        html.classList.add("fonts-loaded");
+      }).catch(function (e) {
+        console.log('Font loading failed or timed out');
+      });
+    };
+    document.head.appendChild(script);
+  </script>
 </body>

@@ -29,19 +29,10 @@ body {
   letter-spacing: 0.01em;
   background-color: var(--extra-light-gray);
 }
-.fonts-failed body {
-  font-family: Helvetica, Arial, sans-serif;
-}
 
 h1, h2, h3, h4 {
   font-family: Sansita, serif;
   letter-spacing: 0.03em;
-}
-.fonts-failed h1,
-.fonts-failed h2,
-.fonts-failed h3,
-.fonts-failed h4 {
-  font-family: Georgia, serif;
 }
 
 a {
@@ -68,7 +59,6 @@ p {
 .nav-container__inner {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
   max-width: 1080px;
   margin: 0 auto;
   padding: 0.625em 0;
@@ -82,9 +72,6 @@ p {
   letter-spacing: 0.03em;
   text-decoration: none;
 }
-.fonts-failed .home-link {
-  font-family: Georgia, serif;
-}
 
 .top-nav {
   display: flex;
@@ -96,14 +83,11 @@ p {
 }
 .top-nav a {
   display: block;
-  font-size: 0.8rem;
-  padding: 0.3rem 1.25rem;
+  padding: 0.3em 1.25em;
   color: var(--white);
   background: var(--brand-green);
   text-decoration: none;
   border-radius: 3px;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
 }
 .top-nav a:hover {
   background-color: var(--dark-green);
@@ -142,7 +126,7 @@ p {
   border: 2px solid hsl(162, 87%, 21%);
   border-radius: 0.2em;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .button:hover {
   background-color: hsl(162, 88%, 30%);
@@ -260,27 +244,4 @@ p {
       Copyright &copy; 2017 Ink, Inc.
     </div>
   </footer>
-
-  <script type="text/javascript">
-    var html = document.documentElement;
-    var script = document.createElement("script");
-    script.src = "fontfaceobserver.js";
-    script.async = true;
-
-    script.onload = function () {
-      var roboto = new FontFaceObserver("Roboto");
-      var sansita = new FontFaceObserver("Sansita");
-      var timeout = 2000;
-
-      Promise.all([
-        roboto.load(null, timeout),
-        sansita.load(null, timeout)
-      ]).then(function () {
-        html.classList.add("fonts-loaded");
-      }).catch(function (e) {
-        html.classList.add("fonts-failed");
-      });
-    };
-    document.head.appendChild(script);
-  </script>
 </body>

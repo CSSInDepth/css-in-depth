@@ -24,23 +24,13 @@ html {
 
 body {
   margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
-  line-height: 1.4;
-  background-color: var(--extra-light-gray);
-}
-.fonts-loaded body {
   font-family: Roboto, sans-serif;
+  line-height: 1.4;
   letter-spacing: 0.01em;
+  background-color: var(--extra-light-gray);
 }
 
 h1, h2, h3, h4 {
-  font-family: Georgia, serif;
-  letter-spacing: -0.03em;
-}
-.fonts-loaded h1,
-.fonts-loaded h2,
-.fonts-loaded h3,
-.fonts-loaded h4 {
   font-family: Sansita, serif;
   letter-spacing: 0.03em;
 }
@@ -78,13 +68,10 @@ p {
 .home-link {
   color: var(--text-color);
   font-size: 1.6rem;
-  font-family: Georgia, serif;
-  letter-spacing: 0.03em;
-  font-weight: bold;
-  text-decoration: none;
-}
-.fonts-loaded .home-link {
   font-family: Sansita, serif;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  text-decoration: none;
 }
 
 .top-nav {
@@ -101,12 +88,9 @@ p {
   padding: 0.3rem 1.25rem;
   color: var(--white);
   background: var(--brand-green);
-  border-radius: 3px;
   text-decoration: none;
+  border-radius: 3px;
   text-transform: uppercase;
-  letter-spacing: -0.03em;
-}
-.fonts-loaded .top-nav a {
   letter-spacing: 0.03em;
 }
 .top-nav a:hover {
@@ -134,6 +118,7 @@ p {
 }
 .hero h2 {
   font-size: 1.95rem;
+  letter-spacing: -0.02em;
   margin-top: 0;
   margin-bottom: 0.625rem;
 }
@@ -263,40 +248,4 @@ p {
       Copyright &copy; 2017 Ink, Inc.
     </div>
   </footer>
-
-  <script type="text/javascript">
-    var html = document.documentElement;
-    var script = document.createElement("script");
-    script.src = "fontfaceobserver.js";
-    script.async = true;
-
-    script.onload = function () {
-      var roboto = new FontFaceObserver("Roboto");
-      var sansita = new FontFaceObserver("Sansita");
-
-      Promise.all([
-        roboto.load(),
-        sansita.load()
-      ]).then(function () {
-        html.classList.add("fonts-loaded");
-      }).catch(function (e) {
-        console.log('Font loading failed or timed out');
-      });
-    };
-    document.head.appendChild(script);
-  </script>
-  <script>/*
-   WebFontConfig = {
-     google: {
-       families: ['Roboto:300', 'Sansita:800']
-     }
-   };
-
-   (function(d) {
-      var wf = d.createElement('script'), s = d.scripts[0];
-      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-      wf.async = true;
-      s.parentNode.insertBefore(wf, s);
-   })(document);*/
-</script>
 </body>

@@ -1,6 +1,6 @@
 <!doctype html>
 <head>
-  <link href="fonts.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300|Sansita:800" rel="stylesheet">
   <style>
 html {
   --brand-green: hsl(162, 87%, 21%);
@@ -24,22 +24,14 @@ html {
 
 body {
   margin: 0;
-  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-family: Roboto, sans-serif;
   line-height: 1.4;
-  background-color: var(--extra-light-gray);
-}
-.fonts-loaded body {
   letter-spacing: 0.01em;
+  background-color: var(--extra-light-gray);
 }
 
 h1, h2, h3, h4 {
-  font-family: Sansita, Georgia, serif;
-  letter-spacing: -0.03em;
-}
-.fonts-loaded h1,
-.fonts-loaded h2,
-.fonts-loaded h3,
-.fonts-loaded h4 {
+  font-family: Sansita, serif;
   letter-spacing: 0.03em;
 }
 
@@ -76,12 +68,10 @@ p {
 .home-link {
   color: var(--text-color);
   font-size: 1.6rem;
-  font-family: Sansita, Georgia, serif;
-  letter-spacing: 0.03em;
+  font-family: Sansita, serif;
   font-weight: bold;
+  letter-spacing: 0.03em;
   text-decoration: none;
-}
-.fonts-loaded .home-link {
 }
 
 .top-nav {
@@ -98,12 +88,9 @@ p {
   padding: 0.3rem 1.25rem;
   color: var(--white);
   background: var(--brand-green);
-  border-radius: 3px;
   text-decoration: none;
+  border-radius: 3px;
   text-transform: uppercase;
-  letter-spacing: -0.03em;
-}
-.fonts-loaded .top-nav a {
   letter-spacing: 0.03em;
 }
 .top-nav a:hover {
@@ -131,12 +118,9 @@ p {
 }
 .hero h2 {
   font-size: 1.95rem;
+  letter-spacing: -0.02em;
   margin-top: 0;
   margin-bottom: 0.625rem;
-  letter-spacing: -0.06em;
-}
-.fonts-loaded .hero h2 {
-  letter-spacing: -0.02em;
 }
 
 .button {
@@ -274,15 +258,15 @@ p {
     script.onload = function () {
       var roboto = new FontFaceObserver("Roboto");
       var sansita = new FontFaceObserver("Sansita");
-      var timeoutLength = 3000;
+      var timeout = 2000;
 
       Promise.all([
-        roboto.load(null, timeoutLength),
-        sansita.load(null, timeoutLength)
+        roboto.load(null, timeout),
+        sansita.load(null, timeout)
       ]).then(function () {
         html.classList.add("fonts-loaded");
       }).catch(function (e) {
-        console.log('Font loading failed or timed out');
+        html.classList.add("fonts-failed");
       });
     };
     document.head.appendChild(script);

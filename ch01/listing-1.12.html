@@ -1,43 +1,55 @@
 <!doctype html>
 <head>
   <style>
-  body {
-    font-family: sans-serif;
-  }
+a:link {
+  color: blue;
+  text-decoration: none;
+}
 
-  h1 {
-    color: darkslategray;
-    margin-bottom: 10px;
-  }
+a:visited {
+  color: purple;
+}
 
-  #nav {
-    margin-top: 10px;
-    list-style: none;
-    padding-left: 0;
-  }
+a:hover {
+  text-decoration: underline;
+}
 
-  #nav li {
-    display: inline-block;
-  }
+a:active {
+  color: red;
+}
 
-  #nav a {
-    color: white;
-    background: cornflowerblue;
-    padding: 5px;
-    border-radius: 5px;
-    text-decoration: none;
-  }
+h1 {
+  color: #2f4f4f;
+  margin-bottom: 10px;
+}
 
-  .featured {
-    background: orange !important;
-  }
+.nav {
+  margin-top: 10px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav li {
+  display: inline-block;
+}
+
+.nav a {
+  color: white;
+  background-color: #13a4a4;
+  padding: 5px;
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+.nav .featured {
+  background-color: orange;
+}
   </style>
 </head>
-
 <body>
   <header class="page-header">
     <h1 id="page-title" class="title">Wombat Coffee Roasters</h1>
-    <ul id="nav" class="nav">
+    <ul id="main-nav" class="nav">
       <li><a href="/">Home</a></li>
       <li><a href="/coffees">Coffees</a></li>
       <li><a href="/brewers">Brewers</a></li>

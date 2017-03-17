@@ -6,26 +6,22 @@ h1 {
   margin-bottom: 10px;
 }
 
-.nav {
+#main-nav {
   margin-top: 10px;
   list-style: none;
   padding-left: 0;
 }
 
-.nav li {
+#main-nav li {
   display: inline-block;
 }
 
-.nav a {
+#main-nav a {
   color: white;
-  background-color: #13a4a4;
+  background: #13a4a4;
   padding: 5px;
   border-radius: 2px;
   text-decoration: none;
-}
-
-a.featured {
-  background-color: orange;
 }
   </style>
 </head>
@@ -36,13 +32,7 @@ a.featured {
       <li><a href="/">Home</a></li>
       <li><a href="/coffees">Coffees</a></li>
       <li><a href="/brewers">Brewers</a></li>
-      <li><a href="/specials" class="featured">Specials</a></li>
+      <li><a href="/specials" class="featured" style="background-color: orange">Specials</a></li>
     </ul>
   </header>
-  <main>
-    <p>
-      Be sure to check out
-      <a href="/specials" class="featured">our specials</a>.
-    </p>
-  </main>
 </body>

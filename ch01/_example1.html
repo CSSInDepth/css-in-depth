@@ -1,6 +1,10 @@
 <!doctype html>
 <head>
   <style>
+body {
+  font-family: sans-serif;
+}
+
 h1 {
   color: #2f4f4f;
   margin-bottom: 10px;
@@ -18,14 +22,15 @@ h1 {
 
 .nav a {
   color: white;
-  background-color: #13a4a4;
-  padding: 5px;
+  background: #13a4a4;
+  padding: 5px 10px;
   border-radius: 2px;
   text-decoration: none;
 }
 
-a.featured {
-  background-color: orange;
+.nav .featured {
+  background: orange;
+  box-shadow: 10px 2px #6f9090;
 }
   </style>
 </head>
@@ -39,10 +44,4 @@ a.featured {
       <li><a href="/specials" class="featured">Specials</a></li>
     </ul>
   </header>
-  <main>
-    <p>
-      Be sure to check out
-      <a href="/specials" class="featured">our specials</a>.
-    </p>
-  </main>
 </body>

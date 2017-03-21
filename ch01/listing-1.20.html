@@ -2,12 +2,30 @@
 <head>
   <style>
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
+}
+
+a:link {
+  color: blue;
+  text-decoration: none;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: red;
 }
 
 h1 {
   color: #2f4f4f;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .nav {
@@ -22,14 +40,28 @@ h1 {
 
 .nav a {
   color: white;
-  background: #13a4a4;
-  padding: 5px;
+  background-color: #13a4a4;
+  padding: 5px 15px;
   border-radius: 2px;
   text-decoration: none;
 }
 
 .nav .featured {
-  background-color: #ffa500;
+  background-color: orange;
+  box-shadow: 10px 2px #6f9090;
+}
+
+.footer {
+  color: #666;
+  background-color: #ccc;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: underline;
 }
   </style>
 </head>
@@ -43,4 +75,8 @@ h1 {
       <li><a href="/specials" class="featured">Specials</a></li>
     </ul>
   </header>
+  <footer class="footer">
+    &copy; 2016 Wombat Coffee Roasters &mdash;
+    <a href="/terms-of-use">Terms of use</a>
+  </footer>
 </body>

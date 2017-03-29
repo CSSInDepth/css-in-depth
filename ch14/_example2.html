@@ -4,14 +4,36 @@
     <meta charset="utf-8">
     <style>
 
+.container {
+  height: 30px;
+  margin-bottom: 20px;
+}
 .box {
-  
+  height: 30px;
+  width: 30px;
+  background-color: hsl(130, 50%, 50%);
+  border-radius: 0.2em;
+  position: absolute;
+  left: 0;
+  transition: all 1s linear;
+}
+.outer:hover .box {
+  left: 400px;
+  background-color: hsl(200, 50%, 50%);
+}
+.ease-in .box {
+  transition-timing-function: ease-in;
+}
+.ease-out .box {
+  transition-timing-function: ease-out;
 }
 
     </style>
   </head>
   <body>
-    <div class="container"><div class="box"></div></div>
-    <div class="container ease-in"><div class="box"></div></div>
-    <div class="container ease-out"><div class="box"></div></div>
+    <div class="outer">
+      <div class="container ease-in"><div class="box"></div></div>
+      <div class="container"><div class="box"></div></div>
+      <div class="container ease-out"><div class="box"></div></div>
+    </div>
   </body>

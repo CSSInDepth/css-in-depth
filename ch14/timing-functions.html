@@ -3,10 +3,19 @@
   <head>
     <meta charset="utf-8">
     <style>
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
 
 .container {
+  position: relative;
   height: 30px;
   margin-bottom: 20px;
+}
+.container span {
+  position: absolute;
+  left: 450px;
+  bottom: 0;
 }
 .box {
   height: 30px;
@@ -32,8 +41,17 @@
   </head>
   <body>
     <div class="outer">
-      <div class="container ease-in"><div class="box"></div></div>
-      <div class="container"><div class="box"></div></div>
-      <div class="container ease-out"><div class="box"></div></div>
+      <div class="container">
+        <div class="box"></div>
+        <span>linear</span>
+      </div>
+      <div class="container ease-in">
+        <div class="box"></div>
+        <span>ease-in</span>
+      </div>
+      <div class="container ease-out">
+        <div class="box"></div>
+        <span>ease-out</span>
+      </div>
     </div>
   </body>

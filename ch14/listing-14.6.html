@@ -1,0 +1,29 @@
+<!doctype>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <style>
+
+.container {
+  position: relative;
+  height: 30px;
+}
+.box {
+  position: absolute;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: hsl(130, 50%, 50%);
+  transition: all 1s steps(3);
+}
+.container:hover .box {
+  left: 400px;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+    </div>
+  </body>

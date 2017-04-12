@@ -25,15 +25,12 @@
       position: absolute;
       background-color: white;
       width: 10em;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.2s linear,
-                  visibility 0s linear 0.2s;
+      height: 0;
+      overflow: hidden;
+      transition: height 0.3s ease-out;
     }
     .dropdown.is-open .dropdown__drawer {
-      opacity: 1;
-      visibility: visible;
-      transition-delay: 0s;
+      height: auto;
     }
 
     .menu {
@@ -86,9 +83,17 @@
       (function () {
         var toggle = document.getElementsByClassName('dropdown__toggle')[0];
         var dropdown = toggle.parentElement;
+        var drawer = document.getElementsByClassName('dropdown__drawer')[0];
+        var height = drawer.scrollHeight;
+
         toggle.addEventListener('click', function (e) {
           e.preventDefault();
           dropdown.classList.toggle('is-open');
+          if (dropdown.classList.contains('is-open')) {
+            drawer.style.setProperty('height', height + 'px');
+          } else {
+            drawer.style.setProperty('height', '0');
+          }
         });
       }());
     </script>

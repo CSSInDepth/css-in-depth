@@ -29,6 +29,10 @@ main {
   display: block;
 }
 
+img {
+  max-width: 100%;
+}
+
 .page-header {
   margin: 0;
   padding: 2rem 2rem 3rem;
@@ -151,11 +155,18 @@ main {
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 2em;
     }
     .card-grid__item {
       min-width: auto;
+      margin: 0;
     }
   }
+}
+
+.card {
+  padding: 0.5em;
+  box-shadow: 0.2em 0.5em 1em rgba(0, 0, 0, 0.3);
 }
 
 @-webkit-keyframes flip-in {
@@ -179,7 +190,7 @@ main {
   </head>
   <body>
     <header>
-      <h1 class="page-header">Brett Hunter Observatory</h1>
+      <h1 class="page-header">The Cluckery</h1>
     </header>
     <nav class="main-nav">
       <ul class="nav-links">
@@ -211,13 +222,26 @@ main {
     </nav>
     <main class="main-container">
       <div class="card-grid">
-        <div class="card-grid__item">Bird
+        <div class="card-grid__item card">
+          <img src="images/chicken1.jpg" alt="a chicken"/>
+          <h4>Chicken</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in urna eu tortor commodo dictum. Donec viverra iaculis sem sed blandit. Nunc nisi mauris, tempor condimentum nisl vel, iaculis hendrerit lacus</p>
         </div>
-        <div class="card-grid__item">Bear
+        <div class="card-grid__item card">
+          <img src="images/chicken2.jpg" alt="a chicken"/>
+          <h4>Rooster</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in urna eu tortor commodo dictum.</p>
+          <p>Donec viverra iaculis sem sed blandit. Nunc nisi mauris, tempor condimentum nisl vel, iaculis hendrerit lacus</p>
         </div>
-        <div class="card-grid__item">Dog
+        <div class="card-grid__item card">
+          <img src="images/chicken3.jpg" alt="a chicken"/>
+          <h4>Chick</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in urna eu tortor commodo dictum. Donec viverra iaculis sem sed blandit. Nunc nisi mauris, tempor condimentum nisl vel, iaculis hendrerit lacus</p>
         </div>
-        <div class="card-grid__item">Parrot
+        <div class="card-grid__item card">
+          <img src="images/chicken4.jpg" alt="a chicken"/>
+          <h4>Chicken</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in urna eu tortor commodo dictum. Donec viverra iaculis sem sed blandit. Nunc nisi mauris, tempor condimentum nisl vel, iaculis hendrerit lacus</p>
         </div>
       </div>
     </main>

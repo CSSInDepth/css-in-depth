@@ -47,6 +47,35 @@
         }
       }
 
+      .nav-links {
+        display: flex;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+        list-style: none;
+        justify-content: space-between;
+      }
+      .nav-links > li + li {
+        margin-left: 0.8em;
+      }
+      .nav-links > li > a {
+        display: block;
+        padding: 0.8em 0;
+        color: white;
+        font-size: 0.8rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+      .nav-links__icon {
+        height: 1.5em;
+        width: 1.5em;
+        vertical-align: -0.2em;
+      }
+      .nav-links > li > a:hover {
+        color: hsl(40, 100%, 70%);
+      }
+
     </style>
   </head>
   <body>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <style>
+
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    animation: over-and-back 2s linear 3;
+  }
+
+  @keyframes over-and-back {
+    0% {
+      background-color: hsl(0, 50%, 50%);
+      transform: translate(0);
+    }
+
+    50% {
+      transform: translate(50px);
+    }
+
+    100% {
+      background-color: hsl(270, 50%, 90%);
+      transform: translate(0);
+    }
+  }
+
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

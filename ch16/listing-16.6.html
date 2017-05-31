@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Raleway" rel="stylesheet">
+    <style type="text/css">
+
+      html {
+        box-sizing: border-box;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+
+      body {
+        background-color: hsl(200, 80%, 30%);
+        background-image: radial-gradient(hsl(200, 80%, 30%), hsl(210, 80%, 20%));
+        color: white;
+        font-family: Raleway, Helvetica, Arial, sans-serif;
+        line-height: 1.4;
+        margin: 0;
+        min-height: 100vh;
+      }
+
+      h1, h2, h3 {
+        font-family: Alfa Slab One, serif;
+        font-weight: 400;
+      }
+
+      main {
+        display: block;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      .page-header {
+        margin: 0;
+        padding: 1rem;
+      }
+
+      @media (min-width: 30em) {
+        .page-header {
+          padding: 2rem 2rem 3rem;
+        }
+      }
+
+      @media (min-width: 30em) {
+        .main-nav {
+          position: fixed;
+          left: 0;
+          top: 8.25rem;
+          z-index: 10;
+          background-color: transparent;
+          transition: background-color .5s linear;
+          border-top-right-radius: 0.5em;
+          border-bottom-right-radius: 0.5em;
+        }
+
+        .main-nav:hover {
+          background-color: rgba(0, 0, 0, 0.6);
+        }
+      }
+
+      .nav-links {
+        display: flex;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+        list-style: none;
+        justify-content: space-between;
+      }
+      .nav-links > li + li {
+        margin-left: 0.8em;
+      }
+      .nav-links > li > a {
+        display: block;
+        padding: 0.8em 0;
+        color: white;
+        font-size: 0.8rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+      .nav-links__icon {
+        height: 1.5em;
+        width: 1.5em;
+        vertical-align: -0.2em;
+      }
+      .nav-links > li > a:hover {
+        color: hsl(40, 100%, 70%);
+      }
+      @media (min-width: 30em) {
+        .nav-links {
+          display: block;
+          padding: 1em;
+          margin-bottom: 0;
+        }
+        .nav-links > li + li {
+          margin-left: 0;
+        }
+
+        .nav-links__label {
+          display: inline-block;
+          margin-left: 1em;
+          padding-right: 1em;
+          opacity: 0;
+          transform: translate(-1em);
+          transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.3),
+                      opacity 0.4s linear;
+        }
+        .nav-links:hover .nav-links__label,
+        .nav-links a:focus > .nav-links__label {
+          opacity: 1;
+          transform: translate(0);
+        }
+        .nav-links > li:nth-child(2) .nav-links__label {
+          transition-delay: 0.1s;
+        }
+        .nav-links > li:nth-child(3) .nav-links__label {
+          transition-delay: 0.2s;
+        }
+        .nav-links > li:nth-child(4) .nav-links__label {
+          transition-delay: 0.3s;
+        }
+        .nav-links > li:nth-child(5) .nav-links__label {
+          transition-delay: 0.4s;
+        }
+
+        .nav-links__icon {
+          transition: transform 0.2s ease-out;
+        }
+
+        .nav-links a:hover > .nav-links__icon,
+        .nav-links a:focus > .nav-links__icon {
+          transform: scale(1.3);
+        }
+      }
+
+      .flyin-grid {
+        margin: 0 1rem;
+      }
+
+      @media (min-width: 30em) {
+        .flyin-grid {
+          display: flex;
+          flex-wrap: wrap;
+          margin: 0 5rem;
+        }
+
+        .flyin-grid__item {
+          flex: 1 1 300px;
+          margin-left: 0.5em;
+          margin-right: 0.5em;
+          max-width: 600px;
+        }
+      }
+
+      .card {
+        margin-bottom: 1em;
+        padding: 0.5em;
+        background-color: white;
+        color: hsl(210, 15%, 20%);
+        box-shadow: 0.2em 0.5em 1em rgba(0, 0, 0, 0.3);
+      }
+      .card > img {
+        width: 100%;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="page-header">The Yolk Factory</h1>
+    </header>
+    <nav class="main-nav">
+      <ul class="nav-links">
+        <li>
+          <a href="/">
+            <img src="images/home.svg" class="nav-links__icon"/>
+            <span class="nav-links__label">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="/events">
+            <img src="images/calendar.svg" class="nav-links__icon"/>
+            <span class="nav-links__label">Events</span>
+          </a>
+        </li>
+        <li>
+          <a href="/members">
+            <img src="images/members.svg" class="nav-links__icon"/>
+            <span class="nav-links__label">Members</span>
+          </a>
+        </li>
+        <li>
+          <a href="/about">
+            <img src="images/star.svg" class="nav-links__icon"/>
+            <span class="nav-links__label">About</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="flyin-grid">
+      <div class="flyin-grid__item card">
+        <img src="images/chicken1.jpg" alt="a chicken"/>
+        <h4>Mrs. Featherstone</h4>
+        <p>
+          She may be a bit frumpy, but Mrs Featherstone gets
+          the job done. She lays her largish cream-colored
+          eggs on a daily basis. She is gregarious to a fault.
+        </p>
+        <p>This Austra White is our most prolific producer.</p>
+      </div>
+      <div class="flyin-grid__item card">
+        <img src="images/chicken2.jpg" alt="a chicken"/>
+        <h4>Hen Solo</h4>
+        <p>
+          Though the most recent addition to our flock, Hen
+          Solo is a fast favorite among our laying brood. She
+          is a sassy and suspicious hen; we frequently have to
+          follow her to find where she has hidden her loot from
+          the other hens.
+        </p>
+        <p>This Snowy Easter Egger lays in delicate shades of
+          blue and green. A full dozen of her eggs costs an
+          additional $2.</p>
+      </div>
+      <div class="flyin-grid__item card">
+        <img src="images/chicken3.jpg" alt="a chicken"/>
+        <h4>Cluck Norris</h4>
+        <p>
+          Every brood has its brawler. Cluck Norris is our
+          feistiest hen, frequently picking fights with other
+          hens about laying territory and foraging space. Her
+          sister hens continue to hope that she will follow the
+          steps of her namesake (eventually) and focus the her
+          strength of will for good.
+        </p>
+        <p>This Buff Chantecler is as robust and hardy as her
+          Canadian forebears, laying through the coldest parts
+          of the winter.</p>
+      </div>
+      <div class="flyin-grid__item card">
+        <img src="images/chicken4.jpg" alt="a chicken"/>
+        <h4>Peggy Schuyler</h4>
+        <p>
+          Peggy was our first and friendliest hen. She is the
+          most likely to greet visitors to the yard, and
+          frequently to be found nesting in the coop. Though
+          not a prolific layer, her output is consistent and
+          regular. You will regularly find her eggs among your
+          dozen.
+        </p>
+        <p>This Lavender Orpington lays light brown eggs.</p>
+      </div>
+    </main>
+  </body>
+</html>

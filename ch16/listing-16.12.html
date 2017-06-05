@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style type="text/css">
+
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    form {
+      max-width: 500px;
+    }
+
+    label,
+    textarea {
+      display: block;
+      margin-bottom: 1em;
+    }
+
+    textarea {
+      width: 100%;
+      font-size: inherit;
+    }
+
+    button {
+      padding: 0.6em 1em;
+      border: 0;
+      background-color: hsl(220, 50%, 50%);
+      color: white;
+      font: inherit;
+      transition: background-color 0.3s linear;
+    }
+    button:hover {
+      background-color: hsl(220, 45%, 40%);
+    }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="trip">Tell us about your first trip to the zoo:</label>
+      <textarea id="trip" name="about-my-trip" rows="5"></textarea>
+      <button type="submit" id="submit-button">Save</button>
+    </form>
+  </body>
+</html>

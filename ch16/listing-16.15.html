@@ -28,7 +28,10 @@
       background-color: hsl(220, 50%, 50%);
       color: white;
       font: inherit;
-      transition: color 0.3s linear;
+      transition: background-color 0.3s linear;
+    }
+    button:hover {
+      background-color: hsl(220, 45%, 40%);
     }
 
     button.is-loading {
@@ -92,29 +95,18 @@
     <form>
       <label for="trip">Tell us about your first trip to the zoo:</label>
       <textarea id="trip" name="about-my-trip" rows="5"></textarea>
-      <button type="submit" id="submit-button">Save</button>
+      <button type="submit" id="submit-button" class="shake">Save</button>
     </form>
 
-    <script type="text/javascript">
-    var input = document.getElementById('trip');
+<script type="text/javascript">
+var input = document.getElementById('trip');
 var button = document.getElementById('submit-button');
 
-var timeout = null;
 button.addEventListener('click', function(event) {
   event.preventDefault();
-  clearTimeout(timeout);
   button.classList.add('is-loading');
   button.disabled = true;
   input.disabled = true;
-});
-input.addEventListener('keyup', function() {
-  clearTimeout(timeout);
-  timeout = setTimeout(function() {
-    button.classList.add('shake');
-  }, 1000);
-});
-button.addEventListener('animationend', function() {
-  button.classList.remove('shake');
 });
 </script>
   </body>

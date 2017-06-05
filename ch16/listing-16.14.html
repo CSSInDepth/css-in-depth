@@ -28,7 +28,10 @@
       background-color: hsl(220, 50%, 50%);
       color: white;
       font: inherit;
-      transition: color 0.3s linear;
+      transition: background-color 0.3s linear;
+    }
+    button:hover {
+      background-color: hsl(220, 45%, 40%);
     }
 
     button.is-loading {
@@ -50,40 +53,12 @@
       animation: spin 0.5s linear infinite;
     }
 
-    .shake {
-      animation: shake 0.7s linear;
-    }
-
     @keyframes spin {
       0% {
         transform: rotate(0deg);
       }
       100% {
         transform: rotate(360deg);
-      }
-    }
-
-    @keyframes shake {
-      0%,
-      100% {
-        transform: translateX(0);
-      }
-      10%,
-      30%,
-      50%,
-      70% {
-        transform: translateX(-0.4em);
-      }
-      20%,
-      40%,
-      60% {
-        transform: translateX(0.4em);
-      }
-      80% {
-        transform: translateX(0.3em);
-      }
-      90% {
-        transform: translateX(-0.3em);
       }
     }
     </style>
@@ -95,26 +70,15 @@
       <button type="submit" id="submit-button">Save</button>
     </form>
 
-    <script type="text/javascript">
-    var input = document.getElementById('trip');
+<script type="text/javascript">
+var input = document.getElementById('trip');
 var button = document.getElementById('submit-button');
 
-var timeout = null;
 button.addEventListener('click', function(event) {
   event.preventDefault();
-  clearTimeout(timeout);
   button.classList.add('is-loading');
   button.disabled = true;
   input.disabled = true;
-});
-input.addEventListener('keyup', function() {
-  clearTimeout(timeout);
-  timeout = setTimeout(function() {
-    button.classList.add('shake');
-  }, 1000);
-});
-button.addEventListener('animationend', function() {
-  button.classList.remove('shake');
 });
 </script>
   </body>

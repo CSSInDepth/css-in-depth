@@ -1,3 +1,4 @@
+/* B.2 */
 $brand-blue: #0086b3;
 
 a:link {
@@ -7,4 +8,132 @@ a:link {
 .page-heading {
   font-size: 1.6rem;
   color: $brand-blue;
+}
+
+
+/* B.3 */
+$padding-left: 3em;
+
+.note-author {
+  left-padding: $padding-left;
+  font-weight: bold;
+}
+
+.note-body {
+  left-padding: $padding-left % 2;
+}
+
+
+/* B.4 */
+.site-nav {
+  display: flex;
+
+  > li {
+    margin-top: 0;
+
+    &.is-active{
+      font-weight: bold;
+    }
+  }
+}
+
+
+/* B.5 */
+html {
+  font-size: 1rem;
+
+  @media (min-width: 45em) {
+    font-size: 1.25rem;
+  }
+}
+
+
+/* B.7 */
+@import "button";
+
+
+/* B.8 */
+@mixin clearfix {
+  &::before {
+    display: table;
+    content: " ";
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+.media {
+  @include clearfix;
+  background-color: #eee;
+}
+
+
+/* B.9 */
+@mixin alert-variant($color, $bg-color) {
+  padding: 0.3em 0.5em;
+  border: 1px solid $color;
+  color: $color;
+  background-color: $bg-color;
+}
+
+.alert-info {
+  @include alert-variant(blue, lightblue)
+}
+
+.alert-danger {
+  @include alert-variant(red, pink)
+}
+
+
+/* B.10 */
+.message {
+  padding: 0.3em 0.5em;
+  border-radius: 0.5em;
+}
+
+.message-info {
+  @extend .message;
+  color: blue;
+  background-color: lightblue;
+}
+
+.message-danger {
+  @extend .message;
+  color: red;
+  background-color: pink;
+}
+
+
+/* B.11 */
+$green: #63a35c;
+
+$green-dark: darken($green, 10%);
+$green-light: lighten($green, 10%);
+
+$green-vivid: saturate($green, 20%);
+$green-dull: desaturate($green, 20%);
+
+$purple: adjust-hue($green, 180deg);
+$teal: adjust-hue($green, 90deg);
+
+$green-transparent: rgba($green, 0.5);
+
+.colors {
+  color: $green-dark;
+  color: $green-light;
+  color: $green-vivid;
+  color: $green-dull;
+  color: $purple;
+  color: $teal;
+  color: $green-transparent;
+}
+
+
+/* B.12 */
+@for $index from 2 to 5 {
+  .nav-links > li:nth-child(#{$index}) {
+    transition-delay: (0.1s * $index) - 0.1s;
+  }
 }

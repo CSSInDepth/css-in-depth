@@ -1,3 +1,94 @@
+/* B.2 */
+a:link {
+  color: #0086b3; }
 
+.page-heading {
+  font-size: 1.6rem;
+  color: #0086b3; }
+
+/* B.3 */
+.note-author {
+  left-padding: 3em;
+  font-weight: bold; }
+
+.note-body {
+  left-padding: 1em; }
+
+/* B.4 */
+.site-nav {
+  display: flex; }
+  .site-nav > li {
+    margin-top: 0; }
+    .site-nav > li.is-active {
+      font-weight: bold; }
+
+/* B.5 */
+html {
+  font-size: 1rem; }
+  @media (min-width: 45em) {
+    html {
+      font-size: 1.25rem; } }
+
+/* B.7 */
+/* B.6 */
+.button {
+  padding: 1em 1.25em;
+  background-color: #265559;
+  color: #333; }
+
+/* B.8 */
+.media {
+  background-color: #eee; }
+  .media::before {
+    display: table;
+    content: " "; }
+  .media::after {
+    clear: both; }
+
+/* B.9 */
+.alert-info {
+  padding: 0.3em 0.5em;
+  border: 1px solid blue;
+  color: blue;
+  background-color: lightblue; }
+
+.alert-danger {
+  padding: 0.3em 0.5em;
+  border: 1px solid red;
+  color: red;
+  background-color: pink; }
+
+/* B.10 */
+.message, .message-info, .message-danger {
+  padding: 0.3em 0.5em;
+  border-radius: 0.5em; }
+
+.message-info {
+  color: blue;
+  background-color: lightblue; }
+
+.message-danger {
+  color: red;
+  background-color: pink; }
+
+/* B.11 */
+.colors {
+  color: #4f824a;
+  color: #82b57d;
+  color: #4fbd43;
+  color: #778a76;
+  color: #9c5ca3;
+  color: #5c87a3;
+  color: rgba(99, 163, 92, 0.5); }
+
+/* B.12 */
+.nav-links > li:nth-child(2) {
+  transition-delay: 0.1s; }
+
+.nav-links > li:nth-child(3) {
+  transition-delay: 0.2s; }
+
+.nav-links > li:nth-child(4) {
+  transition-delay: 0.3s; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,53 +1,80 @@
 <!doctype html>
 <head>
   <style>
-  body {
-    font-family: sans-serif;
-  }
+body {
+  font-family: sans-serif;
+}
 
-  h1 {
-    color: darkslategray;
-    margin-bottom: 10px;
-  }
+a:link {
+  color: blue;
+  text-decoration: none;
+}
 
-  .nav {
-    margin-top: 10px;
-    list-style: none;
-    padding-left: 0;
-  }
+a:visited {
+  color: purple;
+}
 
-  .nav li {
-    display: inline-block;
-  }
+a:hover {
+  text-decoration: underline;
+}
 
-  .nav a {
-    color: white;
-    background: cornflowerblue;
-    padding: 5px;
-    border-radius: 5px;
-    text-decoration: none;
-  }
+a:active {
+  color: red;
+}
 
-  a.featured {
-    background: orange;
-  }
+h1 {
+  color: #2f4f4f;
+  margin-bottom: 10px;
+}
+
+.nav {
+  margin-top: 10px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav li {
+  display: inline-block;
+}
+
+.nav a {
+  color: white;
+  background-color: #13a4a4;
+  padding: 5px;
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+.nav .featured {
+  background-color: orange;
+}
+
+.footer {
+  color: #666;
+  background-color: #ccc;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: underline;
+}
   </style>
 </head>
-
 <body>
   <header class="page-header">
     <h1 id="page-title" class="title">Wombat Coffee Roasters</h1>
-    <ul id="nav" class="nav">
+    <ul id="main-nav" class="nav">
       <li><a href="/">Home</a></li>
       <li><a href="/coffees">Coffees</a></li>
       <li><a href="/brewers">Brewers</a></li>
       <li><a href="/specials" class="featured">Specials</a></li>
     </ul>
   </header>
-  <main>
-    <p>
-      Be sure to check out
-      <a href="/specials" class="featured">our specials</a>.  #A
-    </p>
-  </main>
+  <footer class="footer">
+    &copy; 2016 Wombat Coffee Roasters &mdash;
+    <a href="/terms-of-use">Terms of use</a>
+  </footer>
 </body>

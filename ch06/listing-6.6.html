@@ -18,7 +18,9 @@
 
   .container {
     display: grid;
-    grid-template-columns: [left-start] 2fr [left-end right-start] 1fr [right-end];
+    grid-template-columns: [left-start] 2fr
+                           [left-end right-start] 1fr
+                           [right-end];
     grid-template-rows: repeat(4, [row] auto);
     grid-gap: 1.5em;
     max-width: 1080px;
@@ -32,17 +34,17 @@
   }
 
   .main {
-    grid-column: left-start / left;
+    grid-column: left;
     grid-row: row 3 / span 2;
   }
 
   .sidebar-top {
-    grid-column: right-start / right-end;
+    grid-column: right;
     grid-row: 3 / 4;
   }
 
   .sidebar-bottom {
-    grid-column: right-start / right-end;
+    grid-column: right;
     grid-row: 4 / 5;
   }
 

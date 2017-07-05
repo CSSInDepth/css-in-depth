@@ -194,6 +194,17 @@ p {
   text-align: center;
   font-size: 0.8rem;
 }
+
+.vr {
+  --rhythm: 22px ;
+  background-image: linear-gradient(to bottom, white 1px, white calc(var(--rhythm) - 1px), gray var(--rhythm));
+  background-repeat: repeat-y;
+  background-size: 100% var(--rhythm);
+  background-position: 0 -1px;
+}
+.vr p {
+  margin-top: 1.4em;
+}
   </style>
 </head>
 <body>
@@ -217,7 +228,7 @@ p {
 
   <div class="container">
     <div class="tile-row">
-      <div class="tile">
+      <div class="tile vr">
         <h4>Work together, even if you're apart</h4>
         <p>Organize your team conversations into threads. Collaborate together on documents in real-time. Use face-to-face <a href="/features/video-calling">video calls</a> when typing just won't do.</p>
         <a href="/collaboration" class="button">Read more</a>

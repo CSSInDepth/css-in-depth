@@ -1,8 +1,6 @@
 # CSS in Depth
 Code listings from [CSS In Depth](https://manning.com/books/css-in-depth) by Keith J. Grant
 
-![CSS in Depth book cover](cover.png)
+At first glance, it may appear that some listings are missing—Because working examples requires both HTML and CSS, I have put most listings in an HTML file, using <style> tags for the CSS. This means that both an HTML listing and CSS listing are combined in one file in the repository.
 
-It is generally a best practice to link to stylesheets external to your HTML. I have not done this in these examples for ease of reading. Instead, I have included the CSS for each listing in the page's head using style tags.
-
-Throughout the book, the HTML and CSS are shown in two separate listings. The examples files here are named for the listing of the CSS. For example, listing 1.1 in Chapter one shows some CSS, which is meant to be applied to the HTML in listing 1.2.  The resulting example can be found in ch01/listing-1.1.html.
+For example, in Chapter 1, listing 1.1 is HTML code and listing 1.2 is CSS that is meant to be applied to that HTML. I have included these both in the repository in the file named ch01/listing-1.2.html.  Changes are made to this CSS in ch01/listing 1.3; these are included in ch01/listing-1.3.html, along with the corresponding HTML from listing 1.1.

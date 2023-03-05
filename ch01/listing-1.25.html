@@ -29,17 +29,6 @@
     h1 {
       color: #2f4f4f;
       margin-bottom: 10px;
-      font-weight: bold;
-    }
-
-    .title {
-      font-style: normal;
-      font-variant: normal;
-      font-weight: normal;
-      font-stretch: normal;
-      line-height: normal;
-      font-size: 32px;
-      font-family: Helvetica, Arial, sans-serif;
     }
 
     .nav {
@@ -55,13 +44,37 @@
     .nav a {
       color: white;
       background-color: #13a4a4;
-      padding: 5px;
+      padding: 5px 15px;
       border-radius: 2px;
       text-decoration: none;
     }
 
     .nav .featured {
       background-color: orange;
+    }
+
+    .coffees {
+      margin: 20px 0;
+    }
+
+    .coffees > a {
+      display: inline-block;
+      min-width: 400px;
+      padding: 10px 15px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      color: black;
+      background-color: transparent;
+      border: 1px solid gray;
+      border-radius: 5px;
+    }
+
+    @supports (display: grid) {
+      .coffees {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+      }
     }
 
     .footer {
@@ -92,10 +105,14 @@
     </nav>
   </header>
   <main>
-    <p>
-      Be sure to check out
-      <a href="/specials" class="featured">our specials</a>.
-    </p>
+    <p>Try some of our newest coffees:</p>
+    <div class="coffees">
+      <a href="/coffees/costa-rica">Costa Rica</a>
+      <a href="/coffees/ethiopia">Ethiopia</a>
+      <a href="/coffees/guatamala">Guatamala</a>
+      <a href="/coffees/kenya">Kenya</a>
+      <a href="/coffees/mexico">Mexico</a>
+    </div>
   </main>
   <footer class="footer">
     &copy; 2023 Wombat Coffee Roasters &mdash;

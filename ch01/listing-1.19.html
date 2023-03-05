@@ -1,67 +1,76 @@
-<!doctype html>
+<!DOCTYPE html>
 <head>
   <style>
-body {
-  font-family: sans-serif;
-}
+    body {
+      font-family: sans-serif;
+    }
 
-a:link {
-  color: blue;
-  text-decoration: none;
-}
+    a:link {
+      background-color: blue;
+      color: white;
+      text-decoration: none;
+      padding: 2px;
+    }
 
-a:visited {
-  color: purple;
-}
+    a:visited {
+      background-color: purple;
+    }
 
-a:hover {
-  text-decoration: underline;
-}
+    a:hover {
+      background-color: transparent;
+      color: blue;
+      text-decoration: underline;
+    }
 
-a:active {
-  color: red;
-}
+    a:active {
+      color: red;
+    }
 
-h1 {
-  color: #2f4f4f;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
+    h1 {
+      color: #2f4f4f;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
 
-.nav {
-  margin-top: 10px;
-  list-style: none;
-  padding-left: 0;
-}
+    .title {
+      font: 32px Helvetica, Arial, sans-serif;
+    }
 
-.nav li {
-  display: inline-block;
-}
+    .nav {
+      margin-top: 10px;
+      list-style: none;
+      padding-left: 0;
+    }
 
-.nav a {
-  color: white;
-  background-color: #13a4a4;
-  padding: 10px 15px 0 5px;
-  border-radius: 2px;
-  text-decoration: none;
-}
+    .nav li {
+      display: inline-block;
+    }
 
-.nav .featured {
-  background-color: orange;
-}
+    .nav a {
+      color: white;
+      background-color: #13a4a4;
+      padding: 5px;
+      border-radius: 2px;
+      text-decoration: none;
+    }
 
-.footer {
-  color: #666;
-  background-color: #ccc;
-  padding: 15px 0;
-  text-align: center;
-  font-size: 14px;
-}
+    .nav .featured {
+      background-color: orange;
+    }
 
-.footer a {
-  color: inherit;
-  text-decoration: underline;
-}
+    .footer {
+      color: #666;
+      background-color: #ccc;
+      padding: 15px 0;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: unset;
+      background-color: unset;
+      text-decoration: revert;
+    }
   </style>
 </head>
 <body>
@@ -76,8 +85,14 @@ h1 {
       </ul>
     </nav>
   </header>
+  <main>
+    <p>
+      Be sure to check out
+      <a href="/specials" class="featured">our specials</a>.
+    </p>
+  </main>
   <footer class="footer">
-    &copy; 2016 Wombat Coffee Roasters &mdash;
+    &copy; 2023 Wombat Coffee Roasters &mdash;
     <a href="/terms-of-use">Terms of use</a>
   </footer>
 </body>

@@ -1,53 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <head>
   <style>
-body {
-  font-family: sans-serif;
-}
+    body {
+      font-family: sans-serif;
+    }
 
-a:link {
-  color: blue;
-  text-decoration: none;
-}
+    a:link {
+      background-color: blue;
+      color: white;
+      text-decoration: none;
+      padding: 2px;
+    }
 
-a:visited {
-  color: purple;
-}
+    a:visited {
+      background-color: purple;
+    }
 
-a:hover {
-  text-decoration: underline;
-}
+    a:hover {
+      background-color: transparent;
+      color: blue;
+      text-decoration: underline;
+    }
 
-a:active {
-  color: red;
-}
+    a:active {
+      color: red;
+    }
 
-h1 {
-  color: #2f4f4f;
-  margin-bottom: 10px;
-}
+    h1 {
+      color: #2f4f4f;
+      margin-bottom: 10px;
+    }
 
-.nav {
-  margin-top: 10px;
-  list-style: none;
-  padding-left: 0;
-}
+    .nav {
+      margin-top: 10px;
+      list-style: none;
+      padding-left: 0;
+    }
 
-.nav li {
-  display: inline-block;
-}
+    .nav li {
+      display: inline-block;
+    }
 
-.nav a {
-  color: white;
-  background-color: #13a4a4;
-  padding: 5px;
-  border-radius: 2px;
-  text-decoration: none;
-}
+    .nav a {
+      color: white;
+      background-color: #13a4a4;
+      padding: 5px;
+      border-radius: 2px;
+      text-decoration: none;
+    }
 
-.nav .featured {
-  background-color: orange;
-}
+    .nav .featured {
+      background-color: orange;
+    }
   </style>
 </head>
 <body>
@@ -62,4 +66,10 @@ h1 {
       </ul>
     </nav>
   </header>
+  <main>
+    <p>
+      Be sure to check out
+      <a href="/specials" class="featured">our specials</a>.
+    </p>
+  </main>
 </body>
